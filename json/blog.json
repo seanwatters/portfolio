@@ -1,0 +1,58 @@
+{
+    "posts": [
+        {
+            "link": "https://medium.com/better-programming/staying-focused-and-understanding-trade-offs-4ec9d9be315d",
+            "title": "Staying Focused And Understanding Trade-offs",
+            "subtitle": "In software development and in life",
+            "imgUrl": "https://miro.medium.com/max/1400/1*AEuqL15pGY26xxAZL1JEZQ.png",
+            "date": "May 20, 2019",
+            "publication": "Published in Better Programming",
+            "preview": "Every project comes with a unique set of challenges and obstacles. To ensure success, it’s important that you approach any given project with a clearly defined purpose..."
+        },
+        {
+            "link": "https://medium.com/better-programming/react-native-drawer-navigation-3a2a1aea21a0",
+            "title": "React Native — Drawer Navigation",
+            "subtitle": "With React Navigation",
+            "imgUrl": "https://miro.medium.com/max/1400/1*bBfysBVGiuhHI-ROMOuUbg.png",
+            "date": "Nov 13, 2019",
+            "publication": "Published in Better Programming",
+            "preview": "In this tutorial, we will be walking through the primary features and setup of the React Navigation, Drawer Navigator..."
+        },
+        {
+            "link": "https://medium.com/swlh/react-native-tab-navigation-a373463aa60",
+            "title": "React Native — Tab Navigation",
+            "subtitle": "With React Navigation",
+            "imgUrl": "https://miro.medium.com/max/1400/1*NCIBKmNxfEltO-2Ti5jYuA.png",
+            "date": "Nov 7, 2019",
+            "publication": "Published in The Startup",
+            "preview": "In this tutorial, we will be walking through the primary features and setup of the React Navigation, Bottom Tab Navigatator..."
+        },
+        {
+            "link": "https://medium.com/swlh/intro-to-react-navigation-1d8957fedfd1",
+            "title": "Intro to React Navigation",
+            "subtitle": "An easy to use view controller for React Native",
+            "imgUrl": "https://miro.medium.com/max/1400/1*0IHw8rky-Z8A9tUiRysCsA.png",
+            "date": "Nov 3, 2019",
+            "publication": "Published in The Startup",
+            "preview": "The base of this example project has been built with the Expo CLI. For simplicity’s sake, we’re starting with the blank JavaScript template..."
+        },
+        {
+            "link": "https://medium.com/better-programming/quick-code-snippets-in-atom-3a0b7db99d31",
+            "title": "Creating Quick, Custom Code Snippets for Atom",
+            "subtitle": "A quick custom snippet guide",
+            "imgUrl": "https://miro.medium.com/max/1400/1*UFDXQ7kMgtbvHjWMds8q4Q.png",
+            "date": "Sep 23, 2019",
+            "publication": "Published in Better Programming",
+            "preview": "First, you’ll need Atom installed..."
+        },
+        {
+            "link": "https://medium.com/better-programming/get-comfortable-not-knowing-745aa7c6d4c5",
+            "title": "Get Comfortable Not Knowing",
+            "subtitle": "You stop contributing when you stop learning",
+            "imgUrl": "https://miro.medium.com/max/1400/1*sv4c4BtxQDJPbvw99YKmyg.png",
+            "date": "Jun 5, 2019",
+            "publication": "Published in Better Programming",
+            "preview": "I wrote an article a couple of weeks ago about prioritization and understanding goals in a broader context..."
+        }
+    ]
+}

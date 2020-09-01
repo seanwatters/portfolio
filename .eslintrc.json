@@ -1,0 +1,70 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:jsx-a11y/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "airbnb"
+    ],
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": true,
+        "jest/globals": true,
+        "cypress/globals": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "jest",
+        "cypress"
+    ],
+    "rules": {
+        "no-use-before-define": [
+            "error",
+            {
+                "variables": true
+            }
+        ],
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx",
+                    ".tsx"
+                ]
+            }
+        ],
+        "import/no-unresolved": 0,
+        "@typescript-eslint/no-explicit-any": 0,
+        "react/prop-types": 0,
+        "react/require-default-props": 0,
+        "import/prefer-default-export": 0,
+        "@typescript-eslint/explicit-module-boundary-types": 0,
+        "react/jsx-props-no-spreading": 0,
+        "react/jsx-one-expression-per-line": 0,
+        "jsx-a11y/anchor-is-valid": 0,
+        "react/no-unused-prop-types": 0,
+        "import/extensions": 0,
+        "react/no-danger": 0
+    }
+}
