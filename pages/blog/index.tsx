@@ -2,6 +2,10 @@ import React from 'react';
 import Layout from 'components/Layout';
 import JSON from 'json/blog.json';
 
+import { useAmp } from 'next/amp';
+
+export const config = { amp: 'hybrid' };
+
 interface Post {
   link: string
   title: string
@@ -12,34 +16,47 @@ interface Post {
   preview: string
 }
 
-const Blog = () => (
-  <>
-    <Layout title="Sean Watters — Blog" location="blog">
-      {JSON.posts.map(({
-        link, title, subtitle, imgUrl, date, publication, preview,
-      }: Post) => (
-        <a key={Math.random() + title} className="post" href={link}>
-          <div className="post-title">
-            {title}
-          </div>
-          <div className="post-subtitle">
-            {subtitle}
-          </div>
-          <img className="post-image" src={imgUrl} alt="header" />
-          <div className="post-date">
-            {date}
-          </div>
-          <div className="post-publication">
-            {publication}
-          </div>
-          <div className="post-preview">
-            {preview}
-          </div>
-        </a>
-      ))}
-    </Layout>
+const Blog = () => {
+  const isAmp = useAmp();
 
-    <style jsx>{`
+  return (
+    <>
+      <Layout title="Sean Watters — Blog" location="blog">
+        {JSON.posts.map(({
+          link, title, subtitle, imgUrl, date, publication, preview,
+        }: Post) => (
+          <a key={Math.random() + title} className="post" href={link}>
+            <div className="post-title">
+              {title}
+            </div>
+            <div className="post-subtitle">
+              {subtitle}
+            </div>
+            {isAmp
+              ? (
+                <amp-img
+                  width="300"
+                  height="125"
+                  src={imgUrl}
+                  alt="a cool image"
+                  layout="responsive"
+                />
+              )
+              : (<img className="post-image" src={imgUrl} alt="header" />)}
+            <div className="post-date">
+              {date}
+            </div>
+            <div className="post-publication">
+              {publication}
+            </div>
+            <div className="post-preview">
+              {preview}
+            </div>
+          </a>
+        ))}
+      </Layout>
+
+      <style jsx>{`
       .post {
         margin: auto;
         margin-top: 60px;
@@ -112,8 +129,10 @@ const Blog = () => (
           width: 100%;
         }
       }
-  `}</style>
-  </>
-);
+  `}
+      </style>
+    </>
+  );
+};
 
 export default Blog;

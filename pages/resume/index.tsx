@@ -3,6 +3,8 @@ import Layout from 'components/Layout';
 
 import JSON from 'json/resume.json';
 
+export const config = { amp: 'hybrid' };
+
 interface Job {
   company: string
   location: string
@@ -80,94 +82,94 @@ const Resume = () => (
     </Layout>
 
     <style jsx>{`
-      .resume-body {
-        margin: auto;
-        width: 55%;
-      }
-
-      .education-description {
-        margin-top: 15px;
-        margin-bottom: 15px;
-        font-size: 14px;
-        margin-left: 8%;
-      }
-
-      ul {
-        width: 85%;
-        margin-bottom: 40px;
-      }
-
-      li {
-        margin-top: 7px;
-        margin-bottom: 7px;
-        font-size: 14px;
-      }
-
-      p {
-        margin-bottom: 0px;
-        margin-top: 0px;
-        line-height: 200%;
-        margin-left: 5%;
-      }
-
-      .job-position {
-        margin-top: 20px;
-        font-weight: 600;
-      }
-
-      .area-of-study {
-        font-weight: 600;
-      }
-
-      .title {
-        font-weight: 600;
-        font-size: 18px;
-        margin-left: 5%;
-        margin-top: 40px;
-      }
-
-      .section {
-        margin-bottom: 70px;
-      }
-
-      @media only screen and (max-width : 420px) {
-        body {
-          width: 100%;
-          margin-right: 0px;
-        }
-
         .resume-body {
           margin: auto;
-          width: 90%;
+          width: 55%;
         }
-
-        .job-position {
-          margin-top: 10px;
-          font-weight: 600;
-          font-size: 15px;
+  
+        .education-description {
+          margin-top: 15px;
+          margin-bottom: 15px;
+          font-size: 14px;
+          margin-left: 8%;
         }
-
+  
         ul {
-          width: 80%;
-          font-size: 12px;
+          width: 85%;
+          margin-bottom: 40px;
         }
-
-        h1 {
-          margin-bottom: 20px;
-          margin-top: 20px;
+  
+        li {
+          margin-top: 7px;
+          margin-bottom: 7px;
+          font-size: 14px;
         }
-
+  
         p {
-          margin-top: 10px;
-          margin-bottom: 10px;
-          font-size: 12px;
+          margin-bottom: 0px;
+          margin-top: 0px;
           line-height: 200%;
-          max-width: 95%;
-          min-width: 95%;
+          margin-left: 5%;
         }
-      }
-  `}</style>
+  
+        .job-position {
+          margin-top: 20px;
+          font-weight: 600;
+        }
+  
+        .area-of-study {
+          font-weight: 600;
+        }
+  
+        .title {
+          font-weight: 600;
+          font-size: 18px;
+          margin-left: 5%;
+          margin-top: 40px;
+        }
+  
+        .section {
+          margin-bottom: 70px;
+        }
+  
+        @media only screen and (max-width : 420px) {
+          body {
+            width: 100%;
+            margin-right: 0px;
+          }
+  
+          .resume-body {
+            margin: auto;
+            width: 90%;
+          }
+  
+          .job-position {
+            margin-top: 10px;
+            font-weight: 600;
+            font-size: 15px;
+          }
+  
+          ul {
+            width: 80%;
+            font-size: 12px;
+          }
+  
+          h1 {
+            margin-bottom: 20px;
+            margin-top: 20px;
+          }
+  
+          p {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 12px;
+            line-height: 200%;
+            max-width: 95%;
+            min-width: 95%;
+          }
+        }
+    `}
+    </style>
   </>
 );
-
 export default Resume;
