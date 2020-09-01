@@ -56,6 +56,10 @@ const Layout = ({
       <Head>
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Information about Sean Watters."
+        />
       </Head>
       <header>
         <div className="pre-band">
