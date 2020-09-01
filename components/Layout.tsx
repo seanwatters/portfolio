@@ -34,7 +34,7 @@ const icons: Icon[] = [
   },
   {
     company: 'twitter',
-    url: 'https://twtter.com/sean_watters',
+    url: 'https://twitter.com/sean_watters',
   },
   {
     company: 'github',
