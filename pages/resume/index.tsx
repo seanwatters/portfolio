@@ -128,10 +128,6 @@ const Resume = () => (
           margin-top: 40px;
         }
   
-        section {
-          margin-bottom: 70px;
-        }
-  
         @media only screen and (max-width : 420px) {
           body {
             width: 100%;

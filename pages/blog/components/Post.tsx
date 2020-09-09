@@ -17,15 +17,12 @@ export const PostComponent = ({ post }: {post: PostType}) => {
 
   return (
     <>
-      <div key={Math.random() + title} className="post">
-        <a href={link}>
-          <h2>{title}</h2>
-        </a>
+      <a className="post" href={link}>
+        <h2>{title}</h2>
         <strong className="post-subtitle">{subtitle}</strong>
         <div>{date}</div>
         <div>{publication}</div>
-      </div>
-
+      </a>
       <style jsx>{`
         .post {
           display: flex;
@@ -34,13 +31,14 @@ export const PostComponent = ({ post }: {post: PostType}) => {
           justify-content: center;
           padding: 50px;
           border-radius: 20px;
-          font-weight: 200;
+          font-weight: 300;
           box-shadow: 3px 3px 15px lightgrey;
           font-size: 16px;
+          color: black;
         }
         .post-subtitle {
           font-size: 20px;
-          margin-bottom: 20px;
+          margin: 10px 0;
         }
     `}
       </style>

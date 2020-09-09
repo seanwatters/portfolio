@@ -25,130 +25,44 @@ const secondaryToolsImgSrc: string[] = [
 const Home = () => (
   <>
     <Layout title="Sean Watters — Resume" location="home">
-      <div className="home-page">
-        <div className="area-of-interest-1">
-          <h2>Front End Development</h2>
-        </div>
-        <div className="area-of-interest-2">
-          <h2>Where to find me...</h2>
-          <nav>
-            <div className="icon-wrapper" style={{ left: 80 }}>
-              <BrandIcon color="black" url="https://medium.com/@sean_watters" company="medium" size="95px" />
-            </div>
-            <div className="icon-wrapper" style={{ left: 450, top: -175 }}>
-              <BrandIcon color="blue" url="https://www.linkedin.com/in/seanwatters" company="linkedin" size="95px" />
-            </div>
-            <div className="icon-wrapper" style={{ left: 220, top: -80 }}>
-              <BrandIcon color="lightblue" url="https://twitter.com/sean_watters" company="twitter" size="95px" />
-            </div>
-            <div className="icon-wrapper" style={{ left: 560, top: -270 }}>
-              <BrandIcon color="orange" url="https://gitlab.com/sean_watters" company="gitlab" size="95px" />
-            </div>
-            <div className="icon-wrapper" style={{ left: 700 }}>
-              <BrandIcon color="black" url="https://github.com/seanwatters" company="github" size="95px" />
-            </div>
-
-          </nav>
-        </div>
-        <section className="tools-section">
-          <h1>Tools</h1>
-          <div className="primary-tool-imgs">
-            {primaryToolsImgSrc.map((imgSrc: string) => (
-              <HybridImage
-                key={Math.random() + imgSrc}
-                src={imgSrc}
-                height="125px"
-                width="125px"
-                alt="Tool"
-              />
-            ))}
-          </div>
-          <div className="secondary-tool-imgs">
-            {secondaryToolsImgSrc.map((imgSrc: string) => (
-              <HybridImage
-                key={Math.random() + imgSrc}
-                src={imgSrc}
-                height="60px"
-                width="60px"
-                alt="Tool"
-              />
-            ))}
-          </div>
-        </section>
-      </div>
+      <article>
+        <p>Born and raised in the Greater Seattle Area.
+          Studied Computer Science at Arizona State University.
+          Currently writing software in Phoenix, AZ.
+        </p>
+        <p>
+          Familiarity with contemporary software delivery processes has given me
+          the ability to grow and lead my team to continuously deliver reliable software,
+          on time with confidence; resulting in increased velocity, appropriate test coverage
+          and the flexibility to adapt quickly in production.
+        </p>
+        <p>
+          I value opportunities to reason about loosely defined technical challenges
+          and solutions. I have demonstrated a high capacity for navigating
+          ambiguous problems and positively impacting business outcomes through innovation,
+          effective organization, and overall execution of key projects. I value self sufficiency
+          and time for independent problem solving, however, also enjoy team efforts and
+          opportunities to collaborate within groups.
+        </p>
+        <p>
+          Outside of work I enjoy spending time with my wife and our dog, Sam.
+          I very much enjoy some good coffee, water sports, hiking, and the outdoors.
+          In high school and college I played rugby competively, and have an Olympic
+          Weightlifting coaching certification.
+        </p>
+      </article>
     </Layout>
 
     <style jsx>{`
-        .home-page {
-          position: relative;
-          top: -300px;
+      article {
+        margin: 0 auto;
+        width: 90vw
+      }
+      @media (min-width: 768px) { 
+        article {
+          width: 60vw;
         }
-        .area-of-interest-1 {
-          width: 37vw;
-          height: 27vw;
-          background-color: white;
-          border-radius: 1vw;
-          box-shadow: 3px 3px 15px rgb(0,0,0,0.2);
-          position: relative;
-          left: 54vw;
-        }
-        .area-of-interest-2 {
-          width: 37vw;
-          height: 27vw;
-          background-color: white;
-          border-radius: 1vw;
-          box-shadow: 3px 3px 15px rgb(0,0,0,0.2);
-          position: relative;
-          left: 14vw;
-          top: -385px;
-        }
-        h2 {
-          text-transform: capitalize;
-          padding: 40px;
-        }
-        .icon-wrapper {
-          width: 150px;
-          height: 150px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background-color: white;
-          border-radius: 20px;
-          box-shadow: 3px 3px 15px rgb(0,0,0,0.2);
-          position: relative;
-        }
-
-        .tools-section {
-          height: 100vh;
-          margin-top: -225px;
-        }
-        h1 {
-          font-size: 7rem;
-          text-align: center;
-          text-transform: capitalize;
-        }
-        .primary-tool-imgs {
-          margin: auto;
-          margin-top: 75px;
-          width: 37.5vw;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
-          align-items: center;
-        }
-        .secondary-tool-imgs {
-          margin: auto;
-          margin-top: 100px;
-          width: 65vw;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-          padding: 17.5px;
-          background-color: white;
-          box-shadow: 3px 3px 15px lightgrey;
-          border-radius: 20px;
-        }
+      }
     `}
     </style>
   </>

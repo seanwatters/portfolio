@@ -45,7 +45,7 @@ const Layout = ({
 
     <style jsx>{`
       main {
-        padding-bottom: 100px;
+        padding-bottom: 150px;
       }    
   `}</style>
   </>

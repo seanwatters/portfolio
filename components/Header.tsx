@@ -7,20 +7,12 @@ const Layout = ({
   <>
     <header>
       <div className="pre-band">
-        <Link href="/"><a><div className="name-title">sean watters — software engineer</div></a></Link>
-        <div className="page-navigation-links">
-          <nav className="nav-links">
-            <Link href="/" className="nav-link">
-              <a><div className="link">Home</div></a>
-            </Link>
-            <Link href="/blog" className="nav-link">
-              <a><div className="link">Blog</div></a>
-            </Link>
-            <Link href="/resume" className="nav-link">
-              <a><div className="link">Resume</div></a>
-            </Link>
-          </nav>
-        </div>
+        <Link href="/"><a className="name-title">sean watters — software engineer</a></Link>
+        <nav className="nav-links">
+          <Link href="/"><a className="link">Home</a></Link>
+          <Link href="/blog"><a className="link">Blog</a></Link>
+          <Link href="/resume"><a className="link">Resume</a></Link>
+        </nav>
       </div>
       <h1 className="page-title">{location}</h1>
     </header>
