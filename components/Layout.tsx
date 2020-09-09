@@ -24,6 +24,17 @@ const Layout = ({
           name="description"
           content="Information about Sean Watters."
         />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167813886-1" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-167813886-1');
+        `,
+          }}
+        />
       </Head>
       <Header location={location} />
       <main>
