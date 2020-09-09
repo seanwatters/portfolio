@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from 'components/Layout';
 
-import JSON from 'json/resume.json';
+import JSON from 'data/resume/index';
 
 export const config = { amp: 'hybrid' };
 
@@ -32,9 +32,9 @@ const Resume = () => (
   <>
     <Layout title="Sean Watters — Resume" location="resume">
       <div className="resume-body">
-        <hr />
-        <div className="section">
+        <section>
           <h1>experience</h1>
+          <hr />
           {JSON.experience.map(({
             company, location, role, startDate, endDate, highlights,
           }: Job) => (
@@ -49,10 +49,10 @@ const Resume = () => (
               </ul>
             </div>
           ))}
-        </div>
-        <hr style={{ marginTop: 40 }} />
-        <div className="section">
+        </section>
+        <section>
           <h1>education</h1>
+          <hr />
           {JSON.education.map(({
             institution, location, area, startDate, endDate, description,
           }: School) => (
@@ -64,10 +64,10 @@ const Resume = () => (
               <p className="education-description">{description}</p>
             </div>
           ))}
-        </div>
-        <hr />
-        <div className="section">
+        </section>
+        <section>
           <h1>skills</h1>
+          <hr />
           {JSON.skills.map(({ title, keywords }: SkillSet) => (
             <div key={Math.random() + title}>
               <p>{title}</p>
@@ -77,7 +77,7 @@ const Resume = () => (
               </ul>
             </div>
           ))}
-        </div>
+        </section>
       </div>
     </Layout>
 
@@ -128,7 +128,7 @@ const Resume = () => (
           margin-top: 40px;
         }
   
-        .section {
+        section {
           margin-bottom: 70px;
         }
   
