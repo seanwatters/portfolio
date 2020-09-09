@@ -1,138 +1,81 @@
 import React from 'react';
 import Layout from 'components/Layout';
-import JSON from 'json/blog.json';
+import blogData from 'data/blog/index';
 
-import { useAmp } from 'next/amp';
+import { getStaticIdsByPath } from 'utils/getStaticData';
+import { PostComponent } from './components/Post';
+import type { PostType } from './components/Post';
 
 export const config = { amp: 'hybrid' };
 
-interface Post {
-  link: string
-  title: string
-  subtitle: string
-  imgUrl: string
-  date: string
-  publication: string
-  preview: string
+interface Props {
+  mediumPosts: PostType[]
+  blogPostIds: string[]
 }
 
-const Blog = () => {
-  const isAmp = useAmp();
-
-  return (
-    <>
-      <Layout title="Sean Watters — Blog" location="blog">
-        {JSON.posts.map(({
-          link, title, subtitle, imgUrl, date, publication, preview,
-        }: Post) => (
-          <a key={Math.random() + title} className="post" href={link}>
-            <div className="post-title">
-              {title}
-            </div>
-            <div className="post-subtitle">
-              {subtitle}
-            </div>
-            {isAmp
-              ? (
-                <amp-img
-                  width="300"
-                  height="125"
-                  src={imgUrl}
-                  alt="a cool image"
-                  layout="responsive"
-                />
-              )
-              : (<img className="post-image" src={imgUrl} alt="header" />)}
-            <div className="post-date">
-              {date}
-            </div>
-            <div className="post-publication">
-              {publication}
-            </div>
-            <div className="post-preview">
-              {preview}
-            </div>
-          </a>
+const Blog = ({ mediumPosts /* , blogPostIds */ }: Props) => (
+  <>
+    <Layout title="Sean Watters — Blog" location="blog">
+      {/* <section>
+        <h1>{blogPostIds.map((post: string) => <p>{post}</p>)}</h1>
+      </section> */}
+      <section>
+        <h1 className="section-title">Medium Posts</h1>
+        {mediumPosts.map((post: PostType) => (
+          <PostComponent
+            key={Math.random() + post.title}
+            post={post}
+          />
         ))}
-      </Layout>
+      </section>
+    </Layout>
 
-      <style jsx>{`
-      .post {
-        margin: auto;
-        margin-top: 60px;
-        margin-bottom: 100px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 50%;
-        font-family: "Courier New", Courier, monospace;
-        line-height: 250%;
-      }
-      .post-title {
-        font-size: 30px;
-      }
-      .post-subtitle {
-        font-size: 20px;
-        font-weight: 600;
-        margin-bottom: 20px;
-      }
-      .post-date {
-        font-size: 16px;
-        width: 95%;
+    <style jsx>{`
+      section {
+        width: 90vw;
         margin: auto;
       }
-      .post-publication {
-        font-size: 16px;
-        width: 95%;
-        margin: auto;
+      .section-title {
+        text-align: center;
       }
-      .post-image {
-        margin: auto;
-        width: 100%;
-      }
-      .post-preview {
-        margin-top: 20px;
-        font-size: 20px;
+      @media (min-width: 576px) { 
+        section {
+          width: 90vw;
+        }
       }
 
-      .blog-post-medium-icon {
-        padding-top: 20px;
-        list-style-type: none;
-        margin-left: 30px;
-        opacity: .9;
+      @media (min-width: 768px) { 
+        section {
+          width: 87.5vw;
+        }
       }
 
-      @media only screen and (max-width : 420px) {
-        .post {
-          width: 90%;
-          margin-top: 20px;
-          margin-bottom: 50px;
-        }
-        .post-title {
-          font-size: 22px;
-        }
-        .post-subtitle {
-          font-size: 15px;
-          font-weight: 600;
-          margin-bottom: 20px;
-        }
-        .post-preview {
-          font-size: 14px;
-        }
-        .post-date {
-          font-size: 12px;
-          width: 100%;
-          margin-bottom: -20px;
-        }
-        .post-publication {
-          font-size: 10px;
-          width: 100%;
+      @media (min-width: 992px) {
+        section {
+          width: 67.5vw;
         }
       }
-  `}
-      </style>
-    </>
-  );
+
+      @media (min-width: 1200px) { 
+        section {
+          width: 60vw;
+        }
+      }
+    `}
+    </style>
+  </>
+);
+
+export const getStaticProps = () => {
+  const { mediumPosts } = blogData;
+  const blogPostIds = getStaticIdsByPath('data/blog/posts');
+
+  return {
+    props: {
+      mediumPosts,
+      blogPostIds,
+    },
+  };
 };
 
 export default Blog;

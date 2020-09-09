@@ -3,52 +3,41 @@ import React from 'react';
 const styles = () => (
   <style jsx global>{`
       /* desktop */
+      html {
+        padding: 0px;
+        margin: 0px;
+      }
       body {
         padding: 0px;
         margin: 0px;
-        background-color: white;
+        font-family: "sohne-var","Helvetica Neue","Arial",sans-serif;
       }
 
       a:link {
         text-decoration: none;
-        color: black;
       }
       a:visited {
         text-decoration: none;
-        color: black;
       }
       a:active {
         text-decoration: underline;
       }
 
-      h1 {
-        font-size: 30px;
-        font-weight: 100;
+      h1, h2, h3, h4, h5, h6 {
         color: black;
-        font-family: monospace;
+        padding: 0;
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 2.5rem;
       }
 
       h2 {
-        z-index: 100;
-        font-weight: 100;
-        font-size: 3.5em;
-        color: black;
-        line-height: 95%;
-        margin-right: 95px;
-        margin-left: 95px;
-        float: left;
-        clear: both;
+        font-size: 2rem;
       }
       h3 {
-        margin: auto;
-        margin-top: 30px;
-        max-width: 50%;
-        min-width: 740px;
-        font-size: 20px;
-        color: black;
-        line-height: 120%;
-        font-family: "Courier New", Courier, monospace;
-        clear: both;
+        font-size: 1.5rem;
       }
       h4 {
         z-index: 100;
@@ -61,30 +50,22 @@ const styles = () => (
       }
       p {
         font-size: 16px;
-        font-family: "Courier New", Courier, monospace;
         line-height: 250%;
         color: black;
         margin: auto;
         margin-top: 25px;
         margin-bottom: 15px;
-        max-width: 50%;
-        min-width: 740px;
       }
       ul {
         margin: auto;
         width: 40%;
         font-size: 16px;
-        font-family: "Courier New", Courier, monospace;
         line-height: 150%;
       }
 
       body {
         position: relative;
         min-height: 100vh;
-      }
-
-      main {
-        padding-bottom: 300px;
       }
 
       footer {
