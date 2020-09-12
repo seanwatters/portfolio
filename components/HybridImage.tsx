@@ -2,16 +2,17 @@ import React from 'react';
 import { useAmp } from 'next/amp';
 
 interface Props {
-    src: string
+    src?: string
     height: string
-    width: string
+    width?: string
     alt: string
+    borderRadius?: string
 }
 
 export const config = { amp: 'hybrid' };
 
 const HybridImage = ({
-  src, height, width, alt,
+  src, height, width, alt, borderRadius,
 }: Props) => {
   const isAmp = useAmp();
 
@@ -30,6 +31,7 @@ const HybridImage = ({
           alt={alt}
           height={height}
           width={width}
+          style={{ borderRadius }}
         />
       )}
     </>

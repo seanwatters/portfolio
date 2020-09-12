@@ -5,8 +5,10 @@ declare namespace JSX {
         width?: string;
         height?: string;
         layout?: string;
+        className?: string;
     }
     interface IntrinsicElements {
         'amp-img': AmpImg;
+        'amp-analytics': any;
     }
 }

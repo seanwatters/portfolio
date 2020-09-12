@@ -26,15 +26,16 @@ export const PostComponent = ({ post }: {post: PostType}) => {
       <style jsx>{`
         .post {
           display: flex;
-          margin: 40px 0;
+          margin: 50px 0;
           flex-direction: column;
           justify-content: center;
-          padding: 50px;
+          padding: 70px;
           border-radius: 20px;
           font-weight: 300;
           box-shadow: 3px 3px 15px lightgrey;
           font-size: 16px;
           color: black;
+          background-color: rgb(255, 255, 255, 0.4);
         }
         .post-subtitle {
           font-size: 20px;

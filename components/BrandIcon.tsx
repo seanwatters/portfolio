@@ -1,24 +1,24 @@
 import React from 'react';
 import {
-  faLinkedin, faMedium, faTwitter, faGithub, faGitlab,
+  faLinkedin, faMedium, faTwitter, faGithub, faGitlab, faNode, faReact,
 } from '@fortawesome/free-brands-svg-icons';
 import { library, IconName } from '@fortawesome/fontawesome-svg-core';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-library.add(faLinkedin, faMedium, faTwitter, faGithub, faGitlab);
+library.add(faLinkedin, faMedium, faTwitter, faGithub, faGitlab, faNode, faReact);
 
 interface Props {
-    url: string
-    company: IconName
-    size: string
-    color: string
+  company: IconName
+  size: string
+  color?: string
+  url?: string
 }
 
 const BrandIcon = ({
-  url,
   company,
   size,
+  url,
   color,
 }: Props) => (
   <a
