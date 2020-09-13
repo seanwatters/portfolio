@@ -29,7 +29,7 @@ export const PostComponent = ({ post }: {post: PostType}) => {
           margin: 50px 0;
           flex-direction: column;
           justify-content: center;
-          padding: 70px;
+          padding: 50px;
           border-radius: 20px;
           font-weight: 300;
           box-shadow: 3px 3px 15px lightgrey;
@@ -40,6 +40,11 @@ export const PostComponent = ({ post }: {post: PostType}) => {
         .post-subtitle {
           font-size: 20px;
           margin: 10px 0;
+          font-weight: 600;
+        }
+        div {
+          margin-bottom: 5px;
+          font-weight: 400;
         }
     `}
       </style>

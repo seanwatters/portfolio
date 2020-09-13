@@ -1,37 +1,46 @@
 import React from 'react';
 import {
-  faLinkedin, faMedium, faTwitter, faGithub, faGitlab, faNode, faReact,
+  faLinkedinIn, faMediumM, faTwitter, faGithub, faGitlab, faNode, faReact,
 } from '@fortawesome/free-brands-svg-icons';
 import { library, IconName } from '@fortawesome/fontawesome-svg-core';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-library.add(faLinkedin, faMedium, faTwitter, faGithub, faGitlab, faNode, faReact);
+library.add(faLinkedinIn, faMediumM, faTwitter, faGithub, faGitlab, faNode, faReact);
 
-interface Props {
+export interface Icon {
   company: IconName
-  size: string
+  size: number
   color?: string
-  url?: string
+  backgroundColor?: string
 }
 
 const BrandIcon = ({
   company,
   size,
-  url,
   color,
-}: Props) => (
-  <a
-    href={url}
-    aria-label={`Link to ${company}`}
-  >
+  backgroundColor,
+}: Icon) => (
+  <>
     <FontAwesomeIcon
       icon={['fab', company]}
       className="header-icon"
-      height={size}
+      height={`${size - 14}px`}
       color={color}
     />
-  </a>
+
+    <style jsx>{`
+      .icon-wrapper {
+        height: ${size}px;
+        width: ${size}px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: ${backgroundColor || 'none'};
+        border-radius: 50%;
+      }  
+  `}</style>
+  </>
 );
 
 export default BrandIcon;
