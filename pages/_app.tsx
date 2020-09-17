@@ -6,11 +6,11 @@ interface Props {
   pageProps: any
 }
 
-const MyApp = ({ Component, pageProps }: Props) => (
+const App = ({ Component, pageProps }: Props) => (
   <>
     <Component {...pageProps} />
     <Styles />
   </>
 );
 
-export default MyApp;
+export default App;
