@@ -33,13 +33,13 @@ const icons: FooterIcon[] = [
   },
 ];
 
-const Layout = () => (
+const Footer = ({ theme }: {theme: string}) => (
   <>
     <footer>
       <nav className="external-icons">
         {icons.map(({ company, url, size }: FooterIcon) => (
           <a key={Math.random() + company} href={url} aria-label={`Link to  ${company}`}>
-            <BrandIcon company={company} color="white" backgroundColor="black" size={size} />
+            <BrandIcon company={company} color={theme === 'dark' ? 'white' : 'black'} size={size} />
           </a>
         ))}
       </nav>
@@ -48,9 +48,11 @@ const Layout = () => (
     <style jsx>{`
         footer {
             width: 100vw;
+            background-color: ${theme === 'dark' ? 'black' : 'white'};
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding-top: 100px;
         }
         .external-icons {
             width: 67.5vw;
@@ -59,6 +61,7 @@ const Layout = () => (
             justify-content: space-between;
         }
         .tm {
+            color: ${theme === 'dark' ? 'white' : 'black'};
             font-size: 0.5rem;
             padding: 10px;
             text-transform: capitalize;
@@ -91,4 +94,4 @@ const Layout = () => (
   </>
 );
 
-export default Layout;
+export default Footer;

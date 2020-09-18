@@ -66,17 +66,6 @@ const styles = () => (
         line-height: 150%;
       }
 
-      body {
-        position: relative;
-        min-height: 100vh;
-      }
-
-      footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-      }
-
       /* phone */
       @media only screen and (max-width : 420px) {
         h1 {

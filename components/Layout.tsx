@@ -5,15 +5,17 @@ import Header from './Header';
 import Footer from './Footer';
 
 interface Props {
-    children: any[] | any
-    title: string
-    location?: string
+    children: any[] | any;
+    title: string;
+    location?: string;
+    theme?: string;
 }
 
 const Layout = ({
   children,
   title,
   location,
+  theme = 'light',
 }: Props) => (
   <>
     <div id="page-container">
@@ -38,16 +40,20 @@ const Layout = ({
         />
 
       </Head>
-      <Header location={location} />
+      <Header
+        theme={theme}
+        location={location}
+      />
       <main>
         {children}
       </main>
-      <Footer />
+      <Footer theme={theme} />
     </div>
 
     <style jsx>{`
       main {
-        padding-bottom: 150px;
+        width: 100vw;
+        overflow: hidden;
         padding-top: 35px;
       } 
   `}

@@ -11,11 +11,9 @@ const SectionFour = ({ isVisible, refInjection }: Props) => (
       <h1 className={`section-header ${isVisible ? 'visible' : 'hidden'}`}>Engineering</h1>
       <div className={`section-body ${isVisible ? 'visible' : 'hidden'}`}>
         <p>
-          statically rendered React application built using Next.js and hosted
-          on a Netlify CDN. This web page is built with
-          React.js — more specifically it&apos;s a
-          You see this same website built with.
-          ion built using Next.js and hosted on a Netlify CDN.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
       </div>
     </section>
@@ -23,14 +21,19 @@ const SectionFour = ({ isVisible, refInjection }: Props) => (
         section {
           height: 125vh;
           margin: 0 auto;
-          width: 60vw;
+          width: 100vw;
           position: relative;
+          background-color: black;
         }
         .section-header {
+          color: white;
+          margin-left: 20vw;
+          padding-top: 200px;
           font-size: 2.75rem;
           transition: opacity 1s;
         }
         .section-body {
+          margin-left: 20vw;
           transition: opacity 2s;
           transition-delay: 0.75s;
           padding-left: 10px;
