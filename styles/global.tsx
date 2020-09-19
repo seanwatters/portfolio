@@ -10,7 +10,8 @@ const styles = () => (
       body {
         padding: 0px;
         margin: 0px;
-        font-family: "sohne-var","Helvetica Neue","Arial",sans-serif;
+        color: #111;
+        font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
       }
 
       a:link {
@@ -22,15 +23,22 @@ const styles = () => (
       a:active {
         text-decoration: underline;
       }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      a {
+        color: #06c;
+      }
 
       h1, h2, h3, h4, h5, h6 {
-        color: black;
         padding: 0;
         margin: 0;
       }
 
       h1 {
         font-size: 2.5rem;
+        font-weight: 700;
       }
 
       h2 {
@@ -42,41 +50,20 @@ const styles = () => (
       h4 {
         z-index: 100;
         font-size: 1.7em;
-        color: black;
         line-height: 95%;
         margin-right: 11%;
         margin-left: 11%;
         clear: both
       }
       p {
-        font-size: 16px;
+        font-size: 1.15rem;
         line-height: 250%;
-        color: black;
-        margin: auto;
-        margin-top: 25px;
-        margin-bottom: 15px;
       }
       ul {
         margin: auto;
         width: 40%;
         font-size: 16px;
         line-height: 150%;
-      }
-
-      body {
-        position: relative;
-        min-height: 100vh;
-      }
-
-      footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-      }
-        
-      /* tablet */
-      @media only screen and (min-width: 421px) and (max-width : 768px) {
-
       }
 
       /* phone */

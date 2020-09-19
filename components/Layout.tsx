@@ -5,15 +5,17 @@ import Header from './Header';
 import Footer from './Footer';
 
 interface Props {
-    children: any[] | any
-    title: string
-    location: string
+    children: any[] | any;
+    title: string;
+    location?: string;
+    theme?: string;
 }
 
 const Layout = ({
   children,
   title,
   location,
+  theme = 'light',
 }: Props) => (
   <>
     <div id="page-container">
@@ -24,30 +26,38 @@ const Layout = ({
           name="description"
           content="Information about Sean Watters."
         />
+
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167813886-1" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-167813886-1');
-        `,
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'UA-167813886-1');
+              `,
           }}
         />
+
       </Head>
-      <Header location={location} />
+      <Header
+        theme={theme}
+        location={location}
+      />
       <main>
         {children}
       </main>
-      <Footer />
+      <Footer theme={theme} />
     </div>
 
     <style jsx>{`
       main {
-        padding-bottom: 150px;
-      }    
-  `}</style>
+        width: 100vw;
+        overflow: hidden;
+        padding-top: 35px;
+      } 
+  `}
+    </style>
   </>
 );
 

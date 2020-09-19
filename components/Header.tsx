@@ -1,163 +1,182 @@
 import React from 'react';
 import Link from 'next/link';
 
+import BrandIcon from 'components/BrandIcon';
+
 const Layout = ({
   location,
-}: { location: string }) => (
+}: { location?: string, theme: string }) => (
   <>
     <header>
-      <div className="pre-band">
-        <Link href="/"><a className="name-title">sean watters — software engineer</a></Link>
-        <nav className="nav-links">
-          <Link href="/"><a className="link">Home</a></Link>
-          <Link href="/blog"><a className="link">Blog</a></Link>
-          <Link href="/resume"><a className="link">Resume</a></Link>
-        </nav>
-      </div>
-      <h1 className="page-title">{location}</h1>
+      <nav className="title-section">
+        <a className="twitter-icon" href="https://twitter.com/sean_watters">
+          <BrandIcon company="twitter" color="#f5f5f7" size={37.5} />
+        </a>
+        <Link href="/"><a className="name-title">sean watters</a></Link>
+      </nav>
+      <nav className="nav-links">
+        <Link href="/"><a className="link">Home</a></Link>
+        <Link href="/blog"><a className="link">Blog</a></Link>
+        <Link href="/resume"><a className="link">Resume</a></Link>
+      </nav>
     </header>
+    {location ? <h1 className="page-title">{location}</h1> : <></>}
 
     <style jsx>{`
-    header {
-        width: 100vw;
-        height: 450px;
-        background: rgba(0, 0, 0, 0) url("https://d33wubrfki0l68.cloudfront.net/f6a52691162bc42b12bc7462b2a013c409f4d8c1/ebcb3/images/swift-ui/swiftui2/background.svg") no-repeat scroll center top -425px;
-    }
-    .pre-band {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 100vw;
-        background-color: rgba(0,0,0,0.75);
-        position: fixed;
-        z-index: 10;
-        flex-direction: column;
-        padding: 5px 0;
-    }
-    .name-title {
-        color: white;
-        font-weight: 600;
-        font-size: 1rem;
-        text-transform: capitalize;
-        padding: 0px;
-    }
-    .nav-links {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 75vw;
-    }
-    .link {
-        color: white;
-        font-weight: 600;
-        text-transform: capitalize;
-        font-size: 1.35rem;
-        padding: 12.5px 0;
-    }
-    .page-title {
-        color: white;
-        text-transform: capitalize;
-        text-align: center;
-        font-size: 5.5rem;
-        padding-top: 125px;
-    }
-
-    @media (min-width: 576px) { 
-        header {
-            height: 500px;
-            background: rgba(0, 0, 0, 0) url("https://d33wubrfki0l68.cloudfront.net/f6a52691162bc42b12bc7462b2a013c409f4d8c1/ebcb3/images/swift-ui/swiftui2/background.svg") no-repeat scroll center top -375px;
+        a:link {
+            text-decoration: none;
         }
-        .pre-band {
-            flex-direction: column;
-            padding: 10px 0;
+        a:visited {
+            text-decoration: none;
+        }
+        a:active {
+            text-decoration: none;
+        }
+        header {
+            display: flex;
+            width: 100vw;
+            background-color: rgba(0,0,0,0.92);
+            position: fixed;
+            z-index: 10;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+        }
+        .title-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 23vw;
+        }
+        .twitter-icon {
+            padding-left: 6vw;
         }
         .name-title {
-            font-size: 1rem;
-            padding: 0px;
+            display: none;
         }
         .nav-links {
-            width: 325px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 45vw;
+            padding-right: 6vw;
         }
         .link {
-            font-size: 1.7rem;
-            padding: 17.5px 0;
-        }
-        .page-title {
-            font-size: 8.75rem;
-            padding-top: 120px;
-        }
-    }
-
-    @media (min-width: 768px) { 
-        header {
-            height: 525px;
-            background: rgba(0, 0, 0, 0) url("https://d33wubrfki0l68.cloudfront.net/f6a52691162bc42b12bc7462b2a013c409f4d8c1/ebcb3/images/swift-ui/swiftui2/background.svg") no-repeat scroll center top -350px;
-        }
-        .name-title {
+            color: #f5f5f7;
+            font-weight: 400;
+            text-transform: capitalize;
             font-size: 1rem;
         }
-        .pre-band {
-            padding: 20px 0;
-            flex-direction: row;
-        }
-        .nav-links {
-            width: 200px;
-        }
-        .link {
-            font-size: 1rem;
-            padding: 0;
-        }
         .page-title {
-            font-size: 11rem;
-            padding-top: 85px;
+            text-transform: capitalize;
+            text-align: center;
+            font-size: 3rem;
+            padding-top: 125px;
         }
-    }
 
-    @media (min-width: 992px) {
-        header {
-            height: 590px;
-            background: rgba(0, 0, 0, 0) url("https://d33wubrfki0l68.cloudfront.net/f6a52691162bc42b12bc7462b2a013c409f4d8c1/ebcb3/images/swift-ui/swiftui2/background.svg") no-repeat scroll center top -290px;
+        @media (min-width: 576px) {
+            header {
+                padding: 22px 0;
+            }
+            .nav-links {
+                width: 275px;
+            }
+            .link {
+                font-size: 1.3rem;
+            }
+            .page-title {
+                font-size: 2.75rem;
+                padding-top: 130px;
+            }
         }
-        .pre-band {
-            padding: 25px 0;
-        }
-        .name-title {
-            font-size: 1.15rem;
-        }
-        .nav-links {
-            width: 270px;
-        }
-        .link {
-            font-size: 1.15rem;
-        }
-        .page-title {
-            font-size: 14rem;
-            padding-top: 70px;
-        }
-    }
 
-    @media (min-width: 1200px) { 
-        header {
-            height: 650px;
-            background: rgba(0, 0, 0, 0) url("https://d33wubrfki0l68.cloudfront.net/f6a52691162bc42b12bc7462b2a013c409f4d8c1/ebcb3/images/swift-ui/swiftui2/background.svg") no-repeat scroll center top -230px;
+        @media (min-width: 768px) {
+            header {
+                padding: 18px 0;
+                width: 100vw;
+            }
+            .title-section {
+                width: 205px;
+            }
+            .twitter-icon {
+                padding-top: 1px;
+                padding-left: 40px;
+            }
+            .name-title {
+                display: block;
+                color: #f5f5f7;
+                color: white;
+                font-weight: 400;
+                font-size: 1.2rem;
+                text-transform: capitalize;
+                padding: 0px;
+            }
+            .nav-links {
+                width: 175px;
+                padding-top: 3px;
+                padding-right: 60px;
+            }
+            .link {
+                font-size: 1rem;
+                padding: 0;
+            }
+            .page-title {
+                font-size: 4rem;
+                padding-top: 85px;
+            }
         }
-        .pre-band {
-            padding: 18.5px 0;
+
+        @media (min-width: 992px) {
+            header {
+                padding: 14px;
+                width: 100vw;
+            }
+            .title-section {
+                width: 200px;
+            }
+            .name-title {
+                font-size: 1.07rem;
+            }
+            .nav-links {
+                padding-top: 3px;
+                width: 200px;
+            }
+            .link {
+                font-size: 1rem;
+            }
+            .page-title {
+                font-size: 4.25rem;
+                padding-top: 90px;
+            }
         }
-        .name-title {
-            font-size: 1.25rem;
+
+        @media (min-width: 1200px) {
+            header {
+                padding: 14px 0;
+                width: 100vw;
+            }
+            .title-section {
+                width: 230px;
+            }
+            .twitter-icon {
+                padding-left: 60px;
+            }
+            .name-title {
+                font-size: 1.22rem;
+            }
+            .nav-links {
+                padding-top: 5px;
+                width: 190px;
+                padding-right: 100px;
+            }
+            .link {
+                font-size: 1.1rem;
+            }
+            .page-title {
+                font-size: 3.5rem;
+                padding-top: 100px;
+            }
         }
-        .nav-links {
-            width: 300px;
-        }
-        .link {
-            font-size: 1.25rem;
-        }
-        .page-title {
-            font-size: 16rem;
-            padding-top: 65px;
-        }
-    }
   `}</style>
   </>
 );

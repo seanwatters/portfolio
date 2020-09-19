@@ -1,60 +1,45 @@
 import React from 'react';
-import {
-  faLinkedin, faMedium, faTwitter, faGithub, faGitlab,
-} from '@fortawesome/free-brands-svg-icons';
-import { library, IconName } from '@fortawesome/fontawesome-svg-core';
+import BrandIcon, { Icon } from './BrandIcon';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-library.add(faLinkedin, faMedium, faTwitter, faGithub, faGitlab);
-
-interface Icon {
-    company: IconName
-    url: string
-    color: string
-    backgroundColor: string
+interface FooterIcon extends Icon {
+  url: string
 }
 
-const icons: Icon[] = [
+const icons: FooterIcon[] = [
   {
-    company: 'linkedin',
+    company: 'linkedin-in',
     url: 'https://www.linkedin.com/in/seanwatters',
-    color: 'darkblue',
-    backgroundColor: 'white',
+    size: 32.5,
   },
   {
-    company: 'medium',
+    company: 'medium-m',
     url: 'https://medium.com/@sean_watters',
-    color: 'black',
-    backgroundColor: 'white',
+    size: 32.5,
   },
   {
     company: 'twitter',
     url: 'https://twitter.com/sean_watters',
-    color: 'lightblue',
-    backgroundColor: 'white',
+    size: 32.5,
   },
   {
     company: 'github',
     url: 'https://github.com/seanwatters',
-    color: 'black',
-    backgroundColor: 'white',
+    size: 32.5,
   },
   {
     company: 'gitlab',
     url: 'https://gitlab.com/sean_watters',
-    color: 'orange',
-    backgroundColor: 'white',
+    size: 32.5,
   },
 ];
 
-const Layout = () => (
+const Footer = ({ theme }: {theme: string}) => (
   <>
     <footer>
       <nav className="external-icons">
-        {icons.map(({ company, url }: Icon) => (
+        {icons.map(({ company, url, size }: FooterIcon) => (
           <a key={Math.random() + company} href={url} aria-label={`Link to  ${company}`}>
-            <FontAwesomeIcon icon={['fab', company]} className="footer-icon" color="black" height="32px" />
+            <BrandIcon company={company} color={theme === 'dark' ? 'white' : 'black'} size={size} />
           </a>
         ))}
       </nav>
@@ -63,9 +48,11 @@ const Layout = () => (
     <style jsx>{`
         footer {
             width: 100vw;
+            background-color: ${theme === 'dark' ? 'black' : 'white'};
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding-top: 100px;
         }
         .external-icons {
             width: 67.5vw;
@@ -74,7 +61,8 @@ const Layout = () => (
             justify-content: space-between;
         }
         .tm {
-            font-size: 0.65rem;
+            color: ${theme === 'dark' ? 'white' : 'black'};
+            font-size: 0.5rem;
             padding: 10px;
             text-transform: capitalize;
         }
@@ -82,19 +70,11 @@ const Layout = () => (
             .external-icons {
                 width: 45vw;
             }
-            .tm {
-                font-size: 0.75rem;
-                padding: 10px;
-            }
         }
 
         @media (min-width: 768px) { 
             .external-icons {
                 width: 37.5vw;
-            }
-            .tm {
-                font-size: 0.75rem;
-                padding: 10px;
             }
         }
 
@@ -102,19 +82,11 @@ const Layout = () => (
             .external-icons {
                 width: 25vw;
             }
-            .tm {
-                font-size: 0.75rem;
-                padding: 10px;
-            }
         }
 
         @media (min-width: 1200px) { 
             .external-icons {
-                width: 20vw;
-            }
-            .tm {
-                font-size: 0.75rem;
-                padding: 10px;
+                width: 18vw;
             }
         }
     `}
@@ -122,4 +94,4 @@ const Layout = () => (
   </>
 );
 
-export default Layout;
+export default Footer;
