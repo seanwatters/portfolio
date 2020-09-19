@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from 'components/Layout';
 
-import JSON from 'data/resume/index';
+import ResumeData from 'data/resume/index';
 
 export const config = { amp: 'hybrid' };
 
@@ -35,7 +35,7 @@ const Resume = () => (
         <section>
           <h1>experience</h1>
           <hr />
-          {JSON.experience.map(({
+          {ResumeData.experience.map(({
             company, location, role, startDate, endDate, highlights,
           }: Job) => (
             <div key={Math.random() + company}>
@@ -53,7 +53,7 @@ const Resume = () => (
         <section>
           <h1>education</h1>
           <hr />
-          {JSON.education.map(({
+          {ResumeData.education.map(({
             institution, location, area, startDate, endDate, description,
           }: School) => (
             <div key={Math.random() + institution}>
@@ -68,7 +68,7 @@ const Resume = () => (
         <section>
           <h1>skills</h1>
           <hr />
-          {JSON.skills.map(({ title, keywords }: SkillSet) => (
+          {ResumeData.skills.map(({ title, keywords }: SkillSet) => (
             <div key={Math.random() + title}>
               <p>{title}</p>
               <ul>

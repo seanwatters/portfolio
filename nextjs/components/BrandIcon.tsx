@@ -24,7 +24,6 @@ const BrandIcon = ({
   <>
     <FontAwesomeIcon
       icon={['fab', company]}
-      className="header-icon"
       height={`${size - 14}px`}
       color={color}
     />
