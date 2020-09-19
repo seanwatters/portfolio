@@ -1,0 +1,126 @@
+{
+    "experience": [
+      {
+        "company": "(ISSA) International Sports Sciences Association",
+        "location": "Phoenix, AZ",
+        "role": "Front End Engineer",
+        "endDate": "Present",
+        "highlights": [
+          "Began upgrade from legacy Cold Fusion application to a server side rendered React.js + microservice architecture"
+        ],
+        "startDate": "August 2020"
+      },
+      {
+        "company": "Nikola Motor Company",
+        "location": "Phoenix, AZ",
+        "role": "Software Engineer",
+        "endDate": "August 2020",
+        "highlights": [
+          "Improved UX responsiveness and reduced memory consumption by 30% by selecting new front-end framework for in-vehicle-display systems",
+          "Optimized JavaScript code to support WebGL animation and updates to UI at 10x a second from data streamed over websocket",
+          "Implemented custom turn by turn navigation and routing system on top of Mapbox GL JS",
+          "Added test automation and static analysis to our continuous integration pipeline, resulting in higher change confidence and faster software delivery",
+          "Reviewed pull requests and established clear coding guidelines and standards",
+          "Wrote unit, integration and E2E tests in popular JavaScript testing frameworks"
+        ],
+        "startDate": "August 2019"
+      },
+      {
+        "highlights": [
+          "Developed processes for reporting Vehicle Repair Team’s response time to customers—establishing the correlation of response time and overall cost",
+          "Decreased losses due to delay in response by splitting the team; one group to focus on expediting smaller claims and the other designated to resolve lengthier, higher impact claims"
+        ],
+        "company": "Carvana",
+        "role": "Post-Sale Operations I & II",
+        "location": "Tempe, AZ",
+        "startDate": "October 2017",
+        "endDate": "April 2019"
+      }
+    ],
+      "education": [
+        {
+          "institution": "Arizona State University",
+          "area": "Computer Science",
+          "startDate": "2018",
+          "location": "Tempe, AZ",
+          "endDate": "2019",
+          "description": "Attended for Computer Science from 2018 - 2019. Prior experience with web technologies and software development provided an opportunity to join industry early."
+        },
+        {
+          "institution": "Chandler Gilbert Community College",
+          "area": "Engineering",
+          "startDate": "2016",
+          "location": "Chandler, AZ",
+          "endDate": "2017",
+          "description": "Attended full time senior year of high school."
+        }
+      ],
+      "skills": [
+        {
+          "keywords": [
+            "User Interface Design",
+            "Front-end Development",
+            "Object-oriented Programming",
+            "Data Structures",
+            "Algorithm Design"
+          ],
+          "title": "Basic"
+        },
+        {
+          "keywords": [
+            "JavaScript (Node.js, TypeScript)",
+            "HTML",
+            "CSS (SASS, SCSS)",
+            "Ruby",
+            "Java"
+          ],
+          "title": "Languages"
+        },
+        {
+          "keywords": [
+            "Vue",
+            "Svelte",
+            "React (Next.js, GatsbyJS, Preact, React Native)",
+            "Rails",
+            "Express"
+          ],
+          "title": "Frameworks"
+        },
+        {
+          "keywords": [
+            "GitHub",
+            "GitLab",
+            "NPM"
+          ],
+          "title": "Source Control"
+        },
+        {
+          "keywords": [
+            "SQL (SQLite, PostgreSQL, MySQL)",
+            "NoSQL (MongoDB, AsyncStorage, IndexDB, AWS S3, AWS DynamoDB)"
+          ],
+          "title": "Database"
+        },
+        {
+          "keywords": [
+            "Testing (Jest, Cypress, Puppetier)",
+            "State Mangement (Vuex, MobX, Redux, Apollo Client)",
+            "Networking / Cloud (REST, GraphQL, Apollo Server, AWS Lambda)",
+            "Bundlers (Webpack, Babel, Rollup)"
+          ],
+          "title": "Other Technical"
+        }
+      ],
+      "projects": [
+        {
+          "technologies": [
+            "React",
+            "React Native",
+            "Vue"
+          ],
+          "name": "Chartiful",
+          "url": "https://github.com/chartiful",
+          "description": "Beautiful, highly customizable SVG charts for modern front-end web frameworks."
+        }
+      ]
+    }

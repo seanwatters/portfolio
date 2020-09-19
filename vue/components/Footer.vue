@@ -1,39 +1,47 @@
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator';
+import BrandIcon from './BrandIcon';
 
-// interface FooterIcon extends Icon {
-//   url: string
-// }
+interface FooterIcon {
+    company: string;
+    url: string;
+    size: string;
+}
 
-@Component
+@Component({
+  components: {
+    BrandIcon,
+  },
+})
 export default class Footer extends Vue {
-  // icons: FooterIcon[] = [
-  //   {
-  //     company: 'linkedin-in',
-  //     url: 'https://www.linkedin.com/in/seanwatters',
-  //     size: 32.5,
-  //   },
-  //   {
-  //     company: 'medium-m',
-  //     url: 'https://medium.com/@sean_watters',
-  //     size: 32.5,
-  //   },
-  //   {
-  //     company: 'twitter',
-  //     url: 'https://twitter.com/sean_watters',
-  //     size: 32.5,
-  //   },
-  //   {
-  //     company: 'github',
-  //     url: 'https://github.com/seanwatters',
-  //     size: 32.5,
-  //   },
-  //   {
-  //     company: 'gitlab',
-  //     url: 'https://gitlab.com/sean_watters',
-  //     size: 32.5,
-  //   },
-  // ];
+  icons: FooterIcon[] = [
+    {
+      company: 'linkedin-in',
+      url: 'https://www.linkedin.com/in/seanwatters',
+      size: 'md',
+    },
+    {
+      company: 'medium-m',
+      url: 'https://medium.com/@sean_watters',
+      size: 'md',
+    },
+    {
+      company: 'twitter',
+      url: 'https://twitter.com/sean_watters',
+      size: 'md',
+    },
+    {
+      company: 'github',
+      url: 'https://github.com/seanwatters',
+      size: 'md',
+    },
+    {
+      company: 'gitlab',
+      url: 'https://gitlab.com/sean_watters',
+      size: 'md',
+    },
+  ];
+
   @Prop() readonly theme!: string;
 }
 </script>
@@ -41,11 +49,9 @@ export default class Footer extends Vue {
 <template>
   <footer :style="`background-color: ${theme === 'dark' ? 'black' : 'white'}`">
     <nav class="external-icons">
-      <!-- {icons.map(({ company, url, size }: FooterIcon) => (
-          <a key={Math.random() + company} href={url} aria-label={`Link to  ${company}`}>
-            <BrandIcon company={company} color={theme === 'dark' ? 'white' : 'black'} size={size} />
-          </a>
-        ))} -->
+      <a v-for="{ company, url, size } in icons" :key="company" :href="url" :aria-label="'Link to ' + company">
+        <BrandIcon :company="company" :color="theme === 'dark' ? 'white' : 'black'" :size="size" />
+      </a>
     </nav>
     <div class="tm" :style="`color: ${theme === 'dark' ? 'white' : 'black'}`">
       © 2020 sean watters

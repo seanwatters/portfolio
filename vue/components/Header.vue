@@ -1,7 +1,12 @@
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator';
+import BrandIcon from './BrandIcon';
 
-@Component
+@Component({
+  components: {
+    BrandIcon,
+  },
+})
 export default class Header extends Vue {
     @Prop() readonly theme!: string;
     @Prop() readonly location!: string;
@@ -9,27 +14,35 @@ export default class Header extends Vue {
 </script>
 
 <template>
-  <header>
-    <nav class="title-section">
-      <a class="twitter-icon" href="https://twitter.com/sean_watters">
-        <!-- <BrandIcon company="twitter" color="#f5f5f7" size="{37.5}" /> -->
-      </a>
-      <nuxt-link to="/" class="name-title">
-        sean watters
-      </nuxt-link>
-    </nav>
-    <nav class="nav-links">
-      <nuxt-link to="/" class="link">
-        Home
-      </nuxt-link>
-      <nuxt-link to="/blog" class="link">
-        Blog
-      </nuxt-link>
-      <nuxt-link to="/resume" class="link">
-        Resume
-      </nuxt-link>
-    </nav>
-  </header>
+  <div>
+    <header>
+      <nav class="title-section">
+        <a class="twitter-icon" href="https://twitter.com/sean_watters">
+          <BrandIcon company="twitter" color="#f5f5f7" size="lg" />
+        </a>
+        <nuxt-link to="/" class="name-title">
+          sean watters
+        </nuxt-link>
+      </nav>
+      <nav class="nav-links">
+        <nuxt-link to="/" class="link">
+          Home
+        </nuxt-link>
+        <nuxt-link to="/blog" class="link">
+          Blog
+        </nuxt-link>
+        <nuxt-link to="/resume" class="link">
+          Resume
+        </nuxt-link>
+      </nav>
+    </header>
+    <h1
+      v-if="location"
+      class="page-title"
+    >
+      {{ location }}
+    </h1>
+  </div>
 </template>
 
 <style lang="css" scoped>

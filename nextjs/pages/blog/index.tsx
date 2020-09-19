@@ -1,15 +1,21 @@
 import React from 'react';
 import Layout from 'components/Layout';
-import blogData from 'data/blog/index';
+import BlogData from 'data/blog/index';
 
 import { getStaticIdsByPath } from 'utils/getStaticData';
-import { PostComponent } from './components/Post';
-import type { PostType } from './components/Post';
 
 export const config = { amp: 'hybrid' };
 
+interface Post {
+  link: string
+  title: string
+  subtitle: string
+  imgUrl: string
+  date: string
+  publication: string
+}
 interface Props {
-  mediumPosts: PostType[]
+  mediumPosts: Post[]
   blogPostIds: string[]
 }
 
@@ -21,11 +27,15 @@ const Blog = ({ mediumPosts /* , blogPostIds */ }: Props) => (
       </section> */}
       <section>
         <h1 className="section-title">Medium Posts</h1>
-        {mediumPosts.map((post: PostType) => (
-          <PostComponent
-            key={Math.random() + post.title}
-            post={post}
-          />
+        {mediumPosts.map(({
+          link, title, subtitle, date, publication,
+        }: Post) => (
+          <a key={Math.random()} className="post" href={link}>
+            <h2>{title}</h2>
+            <strong className="post-subtitle">{subtitle}</strong>
+            <div>{date}</div>
+            <div>{publication}</div>
+          </a>
         ))}
       </section>
     </Layout>
@@ -37,6 +47,28 @@ const Blog = ({ mediumPosts /* , blogPostIds */ }: Props) => (
       }
       .section-title {
         text-align: center;
+      }
+      .post {
+        display: flex;
+        margin: 50px 0;
+        flex-direction: column;
+        justify-content: center;
+        padding: 50px;
+        border-radius: 20px;
+        font-weight: 300;
+        box-shadow: 3px 3px 15px lightgrey;
+        font-size: 16px;
+        color: black;
+        background-color: rgb(255, 255, 255, 0.4);
+      }
+      .post-subtitle {
+        font-size: 20px;
+        margin: 10px 0;
+        font-weight: 600;
+      }
+      div {
+        margin-bottom: 5px;
+        font-weight: 400;
       }
       @media (min-width: 576px) { 
         section {
@@ -67,7 +99,7 @@ const Blog = ({ mediumPosts /* , blogPostIds */ }: Props) => (
 );
 
 export const getStaticProps = () => {
-  const { mediumPosts } = blogData;
+  const { mediumPosts } = BlogData;
   const blogPostIds = getStaticIdsByPath('data/blog/posts');
 
   return {
