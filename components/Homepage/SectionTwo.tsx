@@ -187,6 +187,9 @@ const SectionTwo = ({ isVisible, refInjection }: Props) => (
         }
 
         @media (min-width: 1200px) { 
+          section {
+            min-height: 1300px;
+          }
           .interior {
             width: 1100px;
           }
