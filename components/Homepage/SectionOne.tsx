@@ -31,7 +31,7 @@ const SectionOne = ({ isVisible, refInjection }: Props) => (
     </section>
     <style jsx>{`
         section {
-          height: 100vh;
+          height: 110vh;
           min-height: 600px;
           margin: 0 auto;
           width: 80vw;
@@ -98,7 +98,6 @@ const SectionOne = ({ isVisible, refInjection }: Props) => (
           section {
             width: 450px;
             margin-top: 80px;
-            height: 90vh;
             min-height: 835px;
           }
           h1 {
@@ -126,7 +125,6 @@ const SectionOne = ({ isVisible, refInjection }: Props) => (
           section {
             width: 650px;
             margin-top: 100px;
-            height: 100vh;
             min-height: 950px;
           }
           h1 {
@@ -154,7 +152,6 @@ const SectionOne = ({ isVisible, refInjection }: Props) => (
             section {
               width: 790px;
               margin-top: 150px;
-              height: 125vh;
             }
             h1 {
               font-size: 4rem;
@@ -181,7 +178,6 @@ const SectionOne = ({ isVisible, refInjection }: Props) => (
             section {
               width: 1000px;
               margin-top: 150px;
-              height: 125vh;
             }
             h1 {
               font-size: 4.5rem;

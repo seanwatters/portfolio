@@ -11,12 +11,17 @@ const SectionTwo = ({ isVisible, refInjection }: Props) => (
       <div className="interior">
         <h1 className={`header ${isVisible ? 'visible' : 'hidden'}`}>Development</h1>
         <div className={`body ${isVisible ? 'visible' : 'hidden'}`}>
-          <p>
+          {/* <p>
             This web page is built with React.js — more specifically it&apos;s a
             statically rendered React application built using Next.js and hosted on a Netlify CDN.
           </p>
           <p>
             You see this same website built with <a href="https://vue.seanwatters.io">Vue.js</a> and <a href="https://svelte.seanwatters.io">Svelte</a>.
+          </p> */}
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
         </div>
         <img
@@ -33,7 +38,7 @@ const SectionTwo = ({ isVisible, refInjection }: Props) => (
     </section>
     <style jsx>{`
         section {
-          height: 100vh;
+          height: 110vh;
           position: relative;
           width: 100vw;
           background-color: black;
@@ -94,7 +99,6 @@ const SectionTwo = ({ isVisible, refInjection }: Props) => (
 
         @media (min-width: 576px) { 
           section {
-            height: 130vh;
             min-height: 1085px;
           }
           .interior {
@@ -126,7 +130,6 @@ const SectionTwo = ({ isVisible, refInjection }: Props) => (
 
         @media (min-width: 768px) { 
           section {
-            height: 110vh;
             min-height: 1145px;
           }
           .interior {
@@ -134,7 +137,6 @@ const SectionTwo = ({ isVisible, refInjection }: Props) => (
           }
           .header {
             padding-top: 200px;
-            font-size: 2rem;
             color: white;
             margin-left: 0px;
           }
@@ -158,9 +160,6 @@ const SectionTwo = ({ isVisible, refInjection }: Props) => (
         }
 
         @media (min-width: 992px) {
-          section {
-            height: 125vh;
-          }
           .interior {
             width: 850px;
           }
@@ -188,9 +187,6 @@ const SectionTwo = ({ isVisible, refInjection }: Props) => (
         }
 
         @media (min-width: 1200px) { 
-          section {
-            height: 125vh;
-          }
           .interior {
             width: 1100px;
           }
@@ -200,6 +196,9 @@ const SectionTwo = ({ isVisible, refInjection }: Props) => (
           .body {
             width: 550px;
           }
+          p {
+            font-size: 1.15rem;
+          }
 
           .visible.development-browser {
             width: 1200px;
@@ -208,7 +207,7 @@ const SectionTwo = ({ isVisible, refInjection }: Props) => (
           }
           .visible.text-editor-dark {
             width: 925px;
-            top: 600px;
+            top: 575px;
             right: -115px;
           }
         }

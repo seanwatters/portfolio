@@ -19,7 +19,7 @@ const SectionFour = ({ isVisible, refInjection }: Props) => (
     </section>
     <style jsx>{`
         section {
-          height: 125vh;
+          height: 110vh;
           margin: 0 auto;
           width: 100vw;
           position: relative;

@@ -6,7 +6,7 @@ import Layout from 'components/Layout';
 import SectionOne from 'components/Homepage/SectionOne';
 import SectionTwo from 'components/Homepage/SectionTwo';
 import SectionThree from 'components/Homepage/SectionThree';
-import SectionFour from 'components/Homepage/SectionFour';
+// import SectionFour from 'components/Homepage/SectionFour';
 
 const Home = () => {
   const { scrollY } = useScroll();
@@ -55,7 +55,7 @@ const Home = () => {
         <SectionOne isVisible={sectionOneVisible} refInjection={sectionOne} />
         <SectionTwo isVisible={sectionTwoVisible} refInjection={sectionTwo} />
         <SectionThree isVisible={sectionThreeVisible} refInjection={sectionThree} />
-        <SectionFour isVisible={sectionFourVisible} refInjection={sectionFour} />
+        {/* <SectionFour isVisible={sectionFourVisible} refInjection={sectionFour} /> */}
       </Layout>
     </>
   );

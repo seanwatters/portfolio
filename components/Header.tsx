@@ -167,7 +167,7 @@ const Layout = ({
             .nav-links {
                 padding-top: 5px;
                 width: 190px;
-                padding-right: 60px;
+                padding-right: 100px;
             }
             .link {
                 font-size: 1.1rem;
