@@ -34,10 +34,10 @@
   <Layout title="Sean Watters — Resume" theme="light" location="resume">
     <div class="resume-body">
       <section>
-        <h1>experience</h1>
+        <h2>experience</h2>
         <hr />
         {#each experience as { company, location, role, startDate, endDate, highlights }}
-          <h1 class="title">{company}</h1>
+          <h2 class="title">{company}</h2>
           <p>{startDate} - {endDate}</p>
           <p>{location}</p>
           <p class="job-position">{role}</p>
@@ -49,10 +49,10 @@
         {/each}
       </section>
       <section>
-        <h1>education</h1>
+        <h2>education</h2>
         <hr />
         {#each education as { institution, location, area, startDate, endDate, description }}
-          <h1 class="title">{institution}</h1>
+          <h2 class="title">{institution}</h2>
           <p class="area-of-study">{area}</p>
           <p>{startDate} - {endDate}</p>
           <p>{location}</p>
@@ -60,7 +60,7 @@
         {/each}
       </section>
       <section>
-        <h1>skills</h1>
+        <h2>skills</h2>
         <hr />
         {#each skills as { title, keywords }}
           <p>{title}</p>
@@ -139,7 +139,7 @@
       font-size: 12px;
     }
 
-    h1 {
+    h2 {
       margin-bottom: 20px;
       margin-top: 20px;
     }

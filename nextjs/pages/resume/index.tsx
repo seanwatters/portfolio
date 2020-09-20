@@ -33,13 +33,13 @@ const Resume = () => (
     <Layout title="Sean Watters — Resume" location="resume">
       <div className="resume-body">
         <section>
-          <h1>experience</h1>
+          <h2>experience</h2>
           <hr />
           {ResumeData.experience.map(({
             company, location, role, startDate, endDate, highlights,
           }: Job) => (
             <div key={Math.random() + company}>
-              <h1 className="title">{company}</h1>
+              <h2 className="title">{company}</h2>
               <p>{startDate} - {endDate}</p>
               <p>{location}</p>
               <p className="job-position">{role}</p>
@@ -51,13 +51,13 @@ const Resume = () => (
           ))}
         </section>
         <section>
-          <h1>education</h1>
+          <h2>education</h2>
           <hr />
           {ResumeData.education.map(({
             institution, location, area, startDate, endDate, description,
           }: School) => (
             <div key={Math.random() + institution}>
-              <h1 className="title">{institution}</h1>
+              <h2 className="title">{institution}</h2>
               <p className="area-of-study">{area}</p>
               <p>{startDate} - {endDate}</p>
               <p>{location}</p>
@@ -66,7 +66,7 @@ const Resume = () => (
           ))}
         </section>
         <section>
-          <h1>skills</h1>
+          <h2>skills</h2>
           <hr />
           {ResumeData.skills.map(({ title, keywords }: SkillSet) => (
             <div key={Math.random() + title}>
@@ -145,7 +145,7 @@ const Resume = () => (
             font-size: 12px;
           }
   
-          h1 {
+          h2 {
             margin-bottom: 20px;
             margin-top: 20px;
           }

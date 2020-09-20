@@ -45,7 +45,7 @@ export default class Resume extends Vue {
   <Layout location="resume">
     <div class="resume-body">
       <section>
-        <h1>experience</h1>
+        <h2>experience</h2>
         <hr>
         <div
           v-for="{
@@ -53,9 +53,9 @@ export default class Resume extends Vue {
           } in experience"
           :key="company"
         >
-          <h1 class="title">
+          <h2 class="title">
             {{ company }}
-          </h1>
+          </h2>
           <p>{{ startDate }} - {{ endDate }}</p>
           <p>{{ location }}</p>
           <p class="job-position">
@@ -69,7 +69,7 @@ export default class Resume extends Vue {
         </div>
       </section>
       <section>
-        <h1>education</h1>
+        <h2>education</h2>
         <hr>
         <div
           v-for="{
@@ -77,9 +77,9 @@ export default class Resume extends Vue {
           } in education"
           :key="institution"
         >
-          <h1 class="title">
+          <h2 class="title">
             {{ institution }}
-          </h1>
+          </h2>
           <p class="area-of-study">
             {{ area }}
           </p>
@@ -91,7 +91,7 @@ export default class Resume extends Vue {
         </div>
       </section>
       <section>
-        <h1>skills</h1>
+        <h2>skills</h2>
         <hr>
         <div v-for="{ title, keywords } in skills" :key="title">
           <p>{{ title }}</p>
@@ -108,7 +108,7 @@ export default class Resume extends Vue {
 
 <style lang="css" scoped>
     .resume-body {
-          margin: auto;
+        margin: auto;
         width: 55%;
     }
 
@@ -170,7 +170,7 @@ export default class Resume extends Vue {
             font-size: 12px;
         }
 
-        h1 {
+        h2 {
             margin-bottom: 20px;
             margin-top: 20px;
         }
