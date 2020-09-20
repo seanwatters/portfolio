@@ -38,7 +38,7 @@ export default class Footer extends Vue {
     {
       company: 'gitlab',
       url: 'https://gitlab.com/sean_watters',
-      size: 'md',
+      size: 'sm',
     },
   ];
 

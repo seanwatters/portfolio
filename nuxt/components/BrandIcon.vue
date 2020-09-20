@@ -14,9 +14,9 @@ library.add(faLinkedinIn, faMediumM, faTwitter, faGithub, faGitlab, faNode, faRe
   },
 })
 export default class BrandIcon extends Vue {
-    @Prop() company!: string
-    @Prop() size!: string
-    @Prop() color!: string
+    @Prop({ default: 'twitter' }) company!: string
+    @Prop({ default: 'lg' }) size!: string
+    @Prop({ default: 'black'}) color!: string
 }
 </script>
 
