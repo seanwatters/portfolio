@@ -12,6 +12,9 @@ import SectionThree from '@/components/HomePage/SectionThree';
     SectionTwo,
     SectionThree,
   },
+  head: {
+    title: 'Sean Watters — Software Engineer',
+  },
 })
 export default class Home extends Vue {
     sectionOneVisible: boolean = false;

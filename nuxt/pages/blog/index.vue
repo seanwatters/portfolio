@@ -16,6 +16,9 @@ interface Post {
   components: {
     Layout,
   },
+  head: {
+    title: 'Sean Watters — Blog',
+  },
 })
 export default class Blog extends Vue {
     readonly mediumPosts: Post[] = BlogData.mediumPosts;

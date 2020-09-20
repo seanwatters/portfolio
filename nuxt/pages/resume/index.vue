@@ -30,6 +30,9 @@ interface SkillSet {
   components: {
     Layout,
   },
+  head: {
+    title: 'Sean Watters — Resume',
+  },
 })
 export default class Resume extends Vue {
     readonly experience: Job[] = ResumeData.experience;
