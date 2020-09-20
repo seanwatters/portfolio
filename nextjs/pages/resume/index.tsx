@@ -129,11 +129,6 @@ const Resume = () => (
         }
   
         @media only screen and (max-width : 420px) {
-          body {
-            width: 100%;
-            margin-right: 0px;
-          }
-  
           .resume-body {
             margin: auto;
             width: 90%;

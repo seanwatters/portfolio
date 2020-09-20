@@ -8,7 +8,7 @@ export default class SectionOne extends Vue {
 </script>
 
 <template>
-  <section ref="{refInjection}">
+  <section>
     <h1
       :class="`header ${isVisible ? 'visible' : 'hidden'}`"
     >
