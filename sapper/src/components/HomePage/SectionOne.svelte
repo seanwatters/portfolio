@@ -4,7 +4,7 @@
 
 <template>
   <section>
-    <div class="header">
+    <div class="header {isVisible ? 'visible' : 'hidden'}">
       <h1 class="title-1">Developer.</h1>
       <h1 class="title-2">Designer.</h1>
       <h1 class="title-3">Engineer.</h1>
