@@ -17,7 +17,7 @@
 <template>
   <Layout title="Sean Watters — Blog" theme="light" location="Blog">
     <section>
-      <h1 class="section-title">Medium Posts</h1>
+      <h2 class="section-title">Medium Posts</h2>
       {#each mediumPosts as { link, title, subtitle, date, publication }}
         <a href="{link}" class="post">
           <h2>{title}</h2>

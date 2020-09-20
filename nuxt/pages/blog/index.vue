@@ -28,9 +28,9 @@ export default class Blog extends Vue {
 <template>
   <Layout location="Blog">
     <section>
-      <h1 class="section-title">
+      <h2 class="section-title">
         Medium Posts
-      </h1>
+      </h2>
       <a
         v-for="{ title, subtitle, date, publication } in mediumPosts"
         :key="title"

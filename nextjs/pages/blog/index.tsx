@@ -23,10 +23,10 @@ const Blog = ({ mediumPosts /* , blogPostIds */ }: Props) => (
   <>
     <Layout title="Sean Watters — Blog" location="blog">
       {/* <section>
-        <h1>{blogPostIds.map((post: string) => <p>{post}</p>)}</h1>
+        <h2>{blogPostIds.map((post: string) => <p>{post}</p>)}</h2>
       </section> */}
       <section>
-        <h1 className="section-title">Medium Posts</h1>
+        <h2 className="section-title">Medium Posts</h2>
         {mediumPosts.map(({
           link, title, subtitle, date, publication,
         }: Post) => (
