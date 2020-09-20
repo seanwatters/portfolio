@@ -15,7 +15,7 @@
 </script>
 
 <template>
-  <Layout theme="light" location="Blog">
+  <Layout title="Sean Watters — Blog" theme="light" location="Blog">
     <section>
       <h1 class="section-title">Medium Posts</h1>
       {#each mediumPosts as { link, title, subtitle, date, publication }}

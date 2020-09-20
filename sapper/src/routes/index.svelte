@@ -29,7 +29,7 @@
 <svelte:window on:scroll="{handleScroll}" />
 
 <div class="container">
-  <Layout theme="dark">
+  <Layout title="Sean Watters — Software Engineer" theme="dark">
     <div bind:this="{sectionOne}">
       <SectionOne isVisible="{sectionOneVisible}" />
     </div>

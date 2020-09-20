@@ -31,7 +31,7 @@
 </script>
 
 <template>
-  <Layout theme="light" location="resume">
+  <Layout title="Sean Watters — Resume" theme="light" location="resume">
     <div class="resume-body">
       <section>
         <h1>experience</h1>

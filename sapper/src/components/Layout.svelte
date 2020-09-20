@@ -4,6 +4,7 @@
 
   export let location: string | null = null;
   export let theme: string;
+  export let title: string;
 </script>
 
 <svelte:head>
@@ -14,7 +15,7 @@
   </script>
   <!--<script
     async
-    src="https://www.googletagmanager.com/gtag/js?id=UA-167813886-1" ✂prettier:content✂="CiAg">{}</script><script>
+    src="https://www.googletagmanager.com/gtag/js?id=UA-167813886-1" ✂prettier:content✂="CiAg" ✂prettier:content✂="e30=">{}</script><script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
       dataLayer.push(arguments);
