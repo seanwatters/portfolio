@@ -5,7 +5,7 @@ import BrandIcon from 'components/BrandIcon';
 
 const Layout = ({
   location,
-}: { location?: string, theme: string }) => (
+}: { location?: string }) => (
   <>
     <header>
       <nav className="title-section">
