@@ -8,7 +8,6 @@ import BrandIcon from './BrandIcon';
   },
 })
 export default class Header extends Vue {
-    @Prop() readonly theme!: string;
     @Prop() readonly location!: string;
     private iconShouldDisplay: boolean = false;
 
