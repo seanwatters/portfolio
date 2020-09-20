@@ -31,9 +31,7 @@ export default class Home extends Vue {
     }
 
     mounted () {
-      setTimeout(() => {
-        this.sectionOneVisible = true;
-      }, 500)
+      this.sectionOneVisible = true;
       this.sectionTwoRef = document.getElementById('home-page-section-2');
       this.sectionThreeRef = document.getElementById('home-page-section-3');
       this.sectionFourRef = document.getElementById('home-page-section-4');
