@@ -1,5 +1,6 @@
 {
-  "name": "app",
+  "name": "vue-portfolio",
+  "description": "For Vue-y things.",
   "version": "1.0.0",
   "private": true,
   "scripts": {
