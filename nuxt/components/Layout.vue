@@ -19,7 +19,6 @@ export default class Layout extends Vue {
 <template>
   <div id="page-container">
     <Header
-      :theme="theme"
       :location="location"
     />
     <main>

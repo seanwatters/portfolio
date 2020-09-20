@@ -21,7 +21,7 @@ export default class Header extends Vue {
   <div>
     <header>
       <nav class="title-section">
-        <a class="twitter-icon" style="" href="https://twitter.com/sean_watters">
+        <a class="twitter-icon" href="https://twitter.com/sean_watters">
           <BrandIcon v-if="iconShouldDisplay" company="twitter" color="#f5f5f7" size="lg" />
         </a>
         <nuxt-link to="/" class="name-title">
