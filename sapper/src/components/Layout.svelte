@@ -13,9 +13,10 @@
     crossorigin="anonymous"
     async>
   </script>
+  <title>{title}</title>
   <!--<script
     async
-    src="https://www.googletagmanager.com/gtag/js?id=UA-167813886-1" ✂prettier:content✂="CiAg" ✂prettier:content✂="e30=">{}</script><script>
+    src="https://www.googletagmanager.com/gtag/js?id=UA-167813886-1" ✂prettier:content✂="CiAg" ✂prettier:content✂="e30=" ✂prettier:content✂="e30=">{}</script><script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
       dataLayer.push(arguments);
