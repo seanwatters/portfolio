@@ -29,7 +29,7 @@ export default class Layout extends Vue {
   </div>
 </template>
 
-<style lang="css" scoped>
+<style lang="css">
     main {
         width: 100vw;
         overflow: hidden;

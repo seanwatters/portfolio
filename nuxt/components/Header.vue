@@ -11,8 +11,8 @@ export default class Header extends Vue {
     @Prop() readonly location!: string;
     private iconShouldDisplay: boolean = false;
 
-    mounted() {
-        this.iconShouldDisplay = true;
+    mounted () {
+      this.iconShouldDisplay = true;
     }
 }
 </script>
