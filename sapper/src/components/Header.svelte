@@ -1,18 +1,18 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   export let location: string | null;
+
+  onMount(() => {});
 </script>
 
 <template>
   <div>
     <header>
       <nav class="title-section">
-        <a
-          class="twitter-icon"
-          style=""
-          href="https://twitter.com/sean_watters"
-        >
-          <!-- <BrandIcon v-if="iconShouldDisplay" company="twitter" color="#f5f5f7" size="lg" /> -->
-        </a>
+        <a style="height: 27px;" href="https://twitter.com/sean_watters"><i
+            style="color: #f5f5f7; font-size: 25px;"
+            class="twitter-icon fab fa-twitter"
+          ></i></a>
         <a href="." class="name-title">sean watters</a>
       </nav>
       <nav class="nav-links">

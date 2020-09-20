@@ -1,13 +1,43 @@
 <script lang="ts">
+  interface FooterIcon {
+    company: string;
+    url: string;
+  }
   export let theme: string;
+
+  const icons: FooterIcon[] = [
+    {
+      company: 'linkedin-in',
+      url: 'https://www.linkedin.com/in/seanwatters',
+    },
+    {
+      company: 'medium-m',
+      url: 'https://medium.com/@sean_watters',
+    },
+    {
+      company: 'twitter',
+      url: 'https://twitter.com/sean_watters',
+    },
+    {
+      company: 'github',
+      url: 'https://github.com/seanwatters',
+    },
+    {
+      company: 'gitlab',
+      url: 'https://gitlab.com/sean_watters',
+    },
+  ];
 </script>
 
 <template>
   <footer style="background-color: {theme === 'dark' ? 'black' : 'white'}">
     <nav class="external-icons">
-      <!-- <a v-for="{ company, url, size } in icons" :key="company" :href="url" :aria-label="'Link to ' + company">
-            <BrandIcon :company="company" :color="theme === 'dark' ? 'white' : 'black'" :size="size" />
-          </a> -->
+      {#each icons as { company, url }}
+        <a href="{url}"><i
+            style="font-size: 20px; color: {theme === 'dark' ? 'white' : 'black'}"
+            class="fab fa-{company}"
+          ></i></a>
+      {/each}
     </nav>
     <div class="tm" style="color: {theme === 'dark' ? 'white' : 'black'}">
       © 2020 sean watters

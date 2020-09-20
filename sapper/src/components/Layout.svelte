@@ -6,6 +6,14 @@
   export let theme: string;
 </script>
 
+<svelte:head>
+  <script
+    src="https://kit.fontawesome.com/89c2981c8d.js"
+    crossorigin="anonymous"
+    async>
+  </script>
+</svelte:head>
+
 <Header location="{location}" />
 
 <main>
