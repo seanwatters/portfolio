@@ -41,7 +41,6 @@ const Layout = ({
 
       </Head>
       <Header
-        theme={theme}
         location={location}
       />
       <main>
