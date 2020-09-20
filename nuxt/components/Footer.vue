@@ -18,22 +18,22 @@ export default class Footer extends Vue {
     {
       company: 'linkedin-in',
       url: 'https://www.linkedin.com/in/seanwatters',
-      size: 'md',
+      size: 'sm',
     },
     {
       company: 'medium-m',
       url: 'https://medium.com/@sean_watters',
-      size: 'md',
+      size: 'sm',
     },
     {
       company: 'twitter',
       url: 'https://twitter.com/sean_watters',
-      size: 'md',
+      size: 'sm',
     },
     {
       company: 'github',
       url: 'https://github.com/seanwatters',
-      size: 'md',
+      size: 'sm',
     },
     {
       company: 'gitlab',
