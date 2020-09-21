@@ -37,7 +37,7 @@
         <h2>experience</h2>
         <hr />
         {#each experience as { company, location, role, startDate, endDate, highlights }}
-          <h2 class="title">{company}</h2>
+          <h3 class="title">{company}</h3>
           <p>{startDate} - {endDate}</p>
           <p>{location}</p>
           <p class="job-position">{role}</p>
@@ -52,7 +52,7 @@
         <h2>education</h2>
         <hr />
         {#each education as { institution, location, area, startDate, endDate, description }}
-          <h2 class="title">{institution}</h2>
+          <h3 class="title">{institution}</h3>
           <p class="area-of-study">{area}</p>
           <p>{startDate} - {endDate}</p>
           <p>{location}</p>
@@ -79,6 +79,9 @@
   .resume-body {
     margin: auto;
     width: 55%;
+  }
+  h2 {
+    margin-top: 60px;
   }
 
   .education-description {
@@ -119,7 +122,7 @@
     font-weight: 600;
     font-size: 18px;
     margin-left: 5%;
-    margin-top: 40px;
+    margin-top: 45px;
   }
 
   @media only screen and (max-width: 420px) {
