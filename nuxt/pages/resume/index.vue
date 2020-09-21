@@ -53,9 +53,9 @@ export default class Resume extends Vue {
           } in experience"
           :key="company"
         >
-          <h2 class="title">
+          <h3 class="title">
             {{ company }}
-          </h2>
+          </h3>
           <p>{{ startDate }} - {{ endDate }}</p>
           <p>{{ location }}</p>
           <p class="job-position">
@@ -77,9 +77,9 @@ export default class Resume extends Vue {
           } in education"
           :key="institution"
         >
-          <h2 class="title">
+          <h3 class="title">
             {{ institution }}
-          </h2>
+          </h3>
           <p class="area-of-study">
             {{ area }}
           </p>
@@ -119,6 +119,10 @@ export default class Resume extends Vue {
         margin-left: 8%;
     }
 
+    h2 {
+      margin-top: 60px;
+    }
+
     ul {
         width: 85%;
         margin-bottom: 40px;
@@ -150,7 +154,7 @@ export default class Resume extends Vue {
         font-weight: 600;
         font-size: 18px;
         margin-left: 5%;
-        margin-top: 40px;
+        margin-top: 45px;
     }
 
     @media only screen and (max-width : 420px) {
