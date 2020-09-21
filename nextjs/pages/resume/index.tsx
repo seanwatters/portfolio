@@ -39,7 +39,7 @@ const Resume = () => (
             company, location, role, startDate, endDate, highlights,
           }: Job) => (
             <div key={Math.random() + company}>
-              <h2 className="title">{company}</h2>
+              <h3 className="title">{company}</h3>
               <p>{startDate} - {endDate}</p>
               <p>{location}</p>
               <p className="job-position">{role}</p>
@@ -57,7 +57,7 @@ const Resume = () => (
             institution, location, area, startDate, endDate, description,
           }: School) => (
             <div key={Math.random() + institution}>
-              <h2 className="title">{institution}</h2>
+              <h3 className="title">{institution}</h3>
               <p className="area-of-study">{area}</p>
               <p>{startDate} - {endDate}</p>
               <p>{location}</p>
@@ -85,6 +85,9 @@ const Resume = () => (
         .resume-body {
           margin: auto;
           width: 55%;
+        }
+        h2 {
+          margin-top: 60px;
         }
   
         .education-description {
@@ -125,7 +128,7 @@ const Resume = () => (
           font-weight: 600;
           font-size: 18px;
           margin-left: 5%;
-          margin-top: 40px;
+          margin-top: 45px;
         }
   
         @media only screen and (max-width : 420px) {
