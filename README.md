@@ -1,6 +1,4 @@
 # portfolio
-<br>
-## versions
 
 - React.js (`nextjs` dir)
   * TypeScript, ESLint (AirBnb style guide), Styled JSX, Jest, Enzyme, Cypress
