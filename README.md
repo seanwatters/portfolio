@@ -8,5 +8,6 @@
   <br>
 - Svelte (`sapper` dir): [live](https://svelte.seanwatters.io)
   * TypeScript, Prettier
+  <br>
 
-PageSpeed Insights for [all](https://twitter.com/sean_watters/status/1307798389824737285?s=20).
+[PageSpeed Insights](https://twitter.com/sean_watters/status/1307798389824737285?s=20) for all.
