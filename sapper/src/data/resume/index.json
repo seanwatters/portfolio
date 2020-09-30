@@ -93,7 +93,7 @@
     {
       "keywords": [
         "SQL (SQLite, PostgreSQL, MySQL)",
-        "NoSQL (MongoDB, AsyncStorage, IndexDB, AWS S3, AWS DynamoDB)"
+        "NoSQL (MongoDB, AsyncStorage, IndexedDB, AWS S3, AWS DynamoDB)"
       ],
       "title": "Database"
     },
