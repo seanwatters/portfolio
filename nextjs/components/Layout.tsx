@@ -31,7 +31,7 @@ const Layout = ({
           dangerouslySetInnerHTML={{
             __html: `
             window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-            ga('create', 'UA-XXXXX-Y', 'auto');
+            ga('create', 'UA-167813886-1', 'auto');
             ga('send', 'pageview');`,
           }}
         />
