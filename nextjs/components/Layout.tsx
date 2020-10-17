@@ -27,17 +27,15 @@ const Layout = ({
           content="Information about Sean Watters."
         />
 
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167813886-1" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', 'UA-167813886-1');
-              `,
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-XXXXX-Y', 'auto');
+            ga('send', 'pageview');`,
           }}
         />
+        <script async src="https://www.google-analytics.com/analytics.js" />
 
       </Head>
       <Header
