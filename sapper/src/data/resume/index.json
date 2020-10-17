@@ -1,13 +1,14 @@
 {
-  "experience": [{
+  "experience": [
+    {
       "company": "ISSA",
       "location": "Phoenix, AZ",
       "role": "Frontend Engineer",
       "endDate": "Present",
       "highlights": [
-        "Began the migration from a legacy ColdFusion application, to a JAMStack-style Next.js application + services",
-        "Started work on a GraphQL headless CMS solution, using Apollo",
-        "Partnered with our marketing team to start the redesign of our ecommerce web interface (not yet published)"
+        "Began the migration of a legacy ColdFusion application, to a JAMStack Next.js (React) application",
+        "Started work on a GraphQL headless CMS solution",
+        "Partnered with our marketing team to redesign our ecommerce web interface"
 
       ],
       "startDate": "August 2020"
@@ -18,16 +19,17 @@
       "role": "Software Engineer",
       "endDate": "August 2020",
       "highlights": [
-        "Worked with the team to architect a new version of the existing vehicle UI in Vue.js",
+        "Architected a new version of the existing vehicle UI in Vue.js",
         "Partnered with our UX / UI designers to implement a design system that would be reused across all vehicle displays",
+        "Established clear coding standards and guidelines for vehicle front-end team",
         "Implemented custom turn by turn navigation and routing system on top of Mapbox GL JS",
-        "Added test automation and static analysis to our continuous integration pipeline",
-        "Wrote unit, integration and E2E tests in popular JavaScript testing frameworks"
+        "Added test automation and static analysis to our continuous integration pipeline, providing better change confidence and increased speed of development"
       ],
       "startDate": "August 2019"
     },
     {
-      "highlights": [],
+      "highlights": [
+      ],
       "company": "Carvana",
       "role": "Post Sale Operations",
       "location": "Tempe, AZ",
@@ -35,7 +37,8 @@
       "endDate": "April 2019"
     }
   ],
-  "education": [{
+  "education": [
+    {
       "institution": "Arizona State University",
       "area": "Computer Science",
       "startDate": "2018",
@@ -52,7 +55,16 @@
       "description": ""
     }
   ],
-  "skills": [{
+  "skills": [
+    {
+      "keywords": [
+        "Independent and collaborative problem solving",
+        "Navigating ambiguously defined problems",
+        "Integrating and training peers / new team members"
+      ],
+      "title": "Soft"
+    },
+    {
       "keywords": [
         "User Interface Design",
         "Front-end Development",
@@ -60,61 +72,23 @@
         "Data Structures",
         "Algorithm Design"
       ],
-      "title": "Basic"
+      "title": "General"
     },
     {
       "keywords": [
-        "JavaScript (Node.js, TypeScript)",
-        "HTML",
-        "CSS (SASS, SCSS)",
-        "Ruby",
-        "Java"
+        "JavaScript — TypeScript, Node",
+        "React — Next.js, Gatsby and Native",
+        "Vue — Nuxt.js",
+        "Svelte — Sapper",
+        "Ruby — Ruby on Rails",
+        "GraphQL, REST",
+        "SQL — SQLite, PostgreSQL",
+        "NoSQL — DynamoDB, AsyncStorage, IndexedDB",
+        "CSS — SASS, SCSS, Styled-JSX, TailwindCSS, Bootstrap, Material UI",
+        "Testing — Jest, Enzyme, Cypress, React Testing Library, Vue Test Utils, Playwright"
+
       ],
-      "title": "Languages"
-    },
-    {
-      "keywords": [
-        "Vue",
-        "Svelte",
-        "React (Next.js, GatsbyJS, Preact, React Native)",
-        "Rails",
-        "Express"
-      ],
-      "title": "Frameworks"
-    },
-    {
-      "keywords": [
-        "GitHub",
-        "GitLab",
-        "NPM"
-      ],
-      "title": "Source Control"
-    },
-    {
-      "keywords": [
-        "SQL (SQLite, PostgreSQL, MySQL)",
-        "NoSQL (MongoDB, AsyncStorage, IndexedDB, AWS S3, AWS DynamoDB)"
-      ],
-      "title": "Database"
-    },
-    {
-      "keywords": [
-        "Testing (Jest, Cypress, Puppetier)",
-        "State Mangement (Vuex, MobX, Redux, Apollo Client)",
-        "Networking / Cloud (REST, GraphQL, Apollo Server, AWS Lambda)",
-        "Bundlers (Webpack, Babel, Rollup)"
-      ],
-      "title": "Other Technical"
+      "title": "Technical"
     }
-  ],
-  "projects": [{
-    "technologies": [
-      "React",
-      "React Native",
-      "Vue"
-    ],
-    "name": "Chartiful",
-    "url": "https://github.com/chartiful",
-    "description": "Beautiful, highly customizable SVG charts for modern front-end web frameworks."
-  }]
+  ]
 }
