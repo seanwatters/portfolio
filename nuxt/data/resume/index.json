@@ -1,17 +1,16 @@
 {
   "experience": [
     {
-      "company": "ISSA",
-      "location": "Phoenix, AZ",
-      "role": "Frontend Engineer",
+      "company": "Datashield",
+      "location": "Tempe, AZ",
+      "role": "Software Engineer",
       "endDate": "Present",
       "highlights": [
-        "Began the migration of a legacy ColdFusion application, to a JAMStack Next.js (React) application",
-        "Started work on a GraphQL headless CMS solution",
-        "Partnered with our marketing team to redesign our ecommerce web interface"
-
+        "Maintained React.js single page app—made use of TypeScript and Apollo GraphQL",
+        "Developed internal tools and interfaces for cybersecurity analysts",
+        "Wrote unit tests with Jest and React Testing Library"
       ],
-      "startDate": "August 2020"
+      "startDate": "October 2020"
     },
     {
       "company": "Nikola Motor Company",
