@@ -13,6 +13,18 @@
       "startDate": "October 2020"
     },
     {
+      "company": "ISSA",
+      "location": "Phoenix, AZ",
+      "role": "Software Engineer",
+      "endDate": "Present",
+      "highlights": [
+        "Began migration of a legacy ColdFusion application, to a JAMStack, Next.js (React) application",
+        "Started work on a GraphQL headless CMS solution",
+        "Partnered with marketing to begin redesign of e-commerce web interface"
+      ],
+      "startDate": "August 2020"
+    },
+    {
       "company": "Nikola Motor Company",
       "location": "Phoenix, AZ",
       "role": "Software Engineer",
