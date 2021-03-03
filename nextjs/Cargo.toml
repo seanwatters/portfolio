@@ -1,0 +1,48 @@
+[package]
+name = "next_wasm"
+version = "0.1.0"
+authors = ["sean watters <sean@watters.io>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+default = ["console_error_panic_hook", "wee_alloc"]
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+wasm-bindgen = { version = "0.2.70", features = ["serde-serialize"] }
+js-sys = "0.3.47"
+uuid = { version = "0.8", features = ["v4", "wasm-bindgen"] }
+wee_alloc = { version = "0.4.5", optional = true }
+console_error_panic_hook = { version = "0.1.6", optional = true }
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.13"
+
+[profile.release]
+opt-level = "s"
+
+[dependencies.web-sys]
+version = "0.3.5"
+features = [
+  'console',
+  'Document',
+  'Element',
+  'HtmlElement',
+  'HtmlCanvasElement',
+  'WebGlBuffer',
+  'WebGlRenderingContext',
+  'WebGlProgram',
+  'WebGlShader',
+  'Window',
+  'EventTarget',
+  'Event',
+  'HtmlFormElement',
+  'HtmlCollection',
+  'HtmlInputElement',
+  'FormData',
+  'DocumentFragment',
+]
+
