@@ -87,8 +87,8 @@
     },
     {
       "keywords": [
-        "Languages: Rust, Java, Ruby, JavaScript, Node.js, TypeScript, WebAssembly",
-        "Frameworks: React.js, Vue.js, Svelte, Ruby on Rails, React Native",
+        "Languages: Rust, Java, Ruby, JavaScript (TypeScript), WebAssembly",
+        "Frameworks: Rails, React.js, Vue.js, Svelte, React Native",
         "API: GraphQL, REST",
         "Database: PostgreSQL, SQLite, DynamoDB, Cosmos DB, AsyncStorage, IndexedDB"
       ],
