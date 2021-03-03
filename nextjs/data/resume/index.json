@@ -87,18 +87,10 @@
     },
     {
       "keywords": [
-        "JavaScript — TypeScript, Node",
-        "React — Next.js, Gatsby and Native",
-        "Vue — Nuxt.js",
-        "Dart — Flutter",
-        "Svelte — Sapper",
-        "Ruby — Ruby on Rails",
-        "GraphQL, REST",
-        "SQL — SQLite, PostgreSQL",
-        "NoSQL — DynamoDB, AsyncStorage, IndexedDB",
-        "CSS — SASS, SCSS, Styled-JSX, TailwindCSS, Bootstrap, Material UI",
-        "Testing — Jest, Enzyme, Cypress, React Testing Library, Vue Test Utils, Playwright"
-
+        "Languages: Rust, Java, Ruby, JavaScript (TypeScript), WebAssembly",
+        "Frameworks: React.js, Vue.js, Svelte, Ruby on Rails, React Native",
+        "API: GraphQL, REST",
+        "Database: PostgreSQL, SQLite, DynamoDB, Cosmos DB, AsyncStorage, IndexedDB"
       ],
       "title": "Technical"
     }
