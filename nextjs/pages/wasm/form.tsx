@@ -6,12 +6,12 @@ import Layout from 'components/Layout';
 
 const Form = dynamic({
     loader: async () => {
-        const { use_panic_hook, gen_form } = await import('../../webassembly/next_wasm.js');
+        const { use_panic_hook, gen_form } = await import('../../pkg/next_wasm.js');
 
         return function form() {
             useEffect(() => {
                 use_panic_hook()
-                gen_form({ name: "sean watters", age: 22, permissions: "" }, []);
+                gen_form({ name: "", age: 0, permissions: "user" }, []);
             }, []);
 
             return <div id="page-root" />

@@ -92,7 +92,7 @@ fn gen_template(
     User {
         name,
         age,
-        permissions: _,
+        permissions,
     }: &User,
     history: &[User],
 ) -> String {
@@ -108,25 +108,36 @@ fn gen_template(
         )
     });
 
+    let user_checked = if permissions.eq("user") {
+        "checked"
+    } else {
+        ""
+    };
+    let admin_checked = if permissions.eq("admin") {
+        "checked"
+    } else {
+        ""
+    };
+
     format!(
         "
             <h1>Create User!</h1>
             <label for=\"name\">Name</label>
-            <input type=\"text\" id=\"name\" name=\"name\" value=\"{}\">
+            <input type=\"text\" id=\"name\" name=\"name\" placeholder=\"Name\" value=\"{}\">
             <label for=\"age\">Age</label>
             <input type=\"number\" id=\"age\" name=\"age\" value=\"{}\">
             <p>Permissions</p>
             <label for=\"user\">
-                <input type=\"radio\" id=\"user\" name=\"permissions\" value=\"user\" checked>
+                <input type=\"radio\" id=\"user\" name=\"permissions\" value=\"user\" {}>
                 User
             </label>
             <label for=\"admin\">
-                <input type=\"radio\" id=\"admin\" name=\"permissions\" value=\"admin\">
+                <input type=\"radio\" id=\"admin\" name=\"permissions\" value=\"admin\" {}>
                 Admin
             </label>
             <input id=\"submit\" type=\"submit\" value=\"Submit\">
             <section>{}</section>
         ",
-        name, age, history_template
+        name, age, user_checked, admin_checked, history_template,
     )
 }
