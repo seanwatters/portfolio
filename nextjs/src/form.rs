@@ -10,47 +10,29 @@ struct User {
     permissions: String,
 }
 
-fn gen_template(
-    User {
-        name,
-        age,
-        permissions: _,
-    }: &User,
-    history: &[User],
-) -> String {
-    let history_template: String = history.iter().fold(String::new(), |template, user| {
-        format!(
-            "
-                {}
-                <p>{}</p>
-                <div class=\"created-user\">Age: {}</div>
-                <div class=\"created-user\">Permissions: {}</div>
-            ",
-            template, user.name, user.age, user.permissions
-        )
-    });
+#[wasm_bindgen]
+pub fn gen_form(user: &JsValue, history: &JsValue) {
+    let user: User = user.into_serde().unwrap();
+    let history: Vec<User> = history.into_serde().unwrap();
 
-    format!(
-        "
-            <h1>Create User!</h1>
-            <label for=\"name\">Name</label>
-            <input type=\"text\" id=\"name\" name=\"name\" value=\"{}\">
-            <label for=\"age\">Age</label>
-            <input type=\"number\" id=\"age\" name=\"age\" value=\"{}\">
-            <p>Permissions</p>
-            <label for=\"user\">
-                <input type=\"radio\" id=\"user\" name=\"permissions\" value=\"user\" checked>
-                User
-            </label>
-            <label for=\"admin\">
-                <input type=\"radio\" id=\"admin\" name=\"permissions\" value=\"admin\">
-                Admin
-            </label>
-            <input id=\"submit\" type=\"submit\" value=\"Submit\">
-            <section>{}</section>
-        ",
-        name, age, history_template
-    )
+    let window = web_sys::window().expect("no global `window` exists");
+    let document = window.document().expect("should have a document on window");
+
+    let form_node: web_sys::Element = document
+        .create_element("form")
+        .expect("DOM element to have been created");
+
+    form_node.set_id("form-example");
+
+    let template: &str = &gen_template(&user, &history);
+    form_node.set_inner_html(template);
+
+    let form_node = add_submit_handler(form_node, history);
+
+    let root = document
+        .get_element_by_id("page-root")
+        .expect("page root to exist");
+    root.append_child(&form_node).expect("root appended");
 }
 
 fn add_submit_handler(form_node: web_sys::Element, mut history: Vec<User>) -> web_sys::Element {
@@ -106,31 +88,45 @@ fn add_submit_handler(form_node: web_sys::Element, mut history: Vec<User>) -> we
     form_node
 }
 
-#[wasm_bindgen]
-pub fn gen_form(user: &JsValue, history: &JsValue) {
-    let user: User = user.into_serde().unwrap();
-    let history: Vec<User> = history.into_serde().unwrap();
+fn gen_template(
+    User {
+        name,
+        age,
+        permissions: _,
+    }: &User,
+    history: &[User],
+) -> String {
+    let history_template: String = history.iter().fold(String::new(), |template, user| {
+        format!(
+            "
+                {}
+                <p>{}</p>
+                <div class=\"created-user\">Age: {}</div>
+                <div class=\"created-user\">Permissions: {}</div>
+            ",
+            template, user.name, user.age, user.permissions
+        )
+    });
 
-    // get `window` from web_sys
-    let window = web_sys::window().expect("no global `window` exists");
-    let document = window.document().expect("should have a document on window");
-
-    // build `form` element
-    let form_node: web_sys::Element = document
-        .create_element("form")
-        .expect("DOM element to have been created");
-    // set unique form `id`
-    form_node.set_id("form-example");
-
-    // insert template
-    let template: &str = &gen_template(&user, &history);
-    form_node.set_inner_html(template);
-
-    let form_node = add_submit_handler(form_node, history);
-
-    // append built `form` to DOM `body`
-    let root = document
-        .get_element_by_id("page-root")
-        .expect("page root to exist");
-    root.append_child(&form_node).expect("root appended");
+    format!(
+        "
+            <h1>Create User!</h1>
+            <label for=\"name\">Name</label>
+            <input type=\"text\" id=\"name\" name=\"name\" value=\"{}\">
+            <label for=\"age\">Age</label>
+            <input type=\"number\" id=\"age\" name=\"age\" value=\"{}\">
+            <p>Permissions</p>
+            <label for=\"user\">
+                <input type=\"radio\" id=\"user\" name=\"permissions\" value=\"user\" checked>
+                User
+            </label>
+            <label for=\"admin\">
+                <input type=\"radio\" id=\"admin\" name=\"permissions\" value=\"admin\">
+                Admin
+            </label>
+            <input id=\"submit\" type=\"submit\" value=\"Submit\">
+            <section>{}</section>
+        ",
+        name, age, history_template
+    )
 }
