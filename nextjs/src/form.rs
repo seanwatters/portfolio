@@ -38,9 +38,9 @@ pub fn gen_form(user: &JsValue, history: &JsValue) {
 fn add_submit_handler(form_node: web_sys::Element, mut history: Vec<User>) -> web_sys::Element {
     let closure = Closure::wrap(Box::new(move |event: web_sys::Event| {
         event.prevent_default();
-        let mut name: String = String::from("");
+        let mut name: String = String::new();
         let mut age: u32 = 0;
-        let mut permissions: String = String::from("");
+        let mut permissions: String = String::new();
 
         let target = event.current_target().unwrap();
         match target.dyn_ref::<web_sys::HtmlFormElement>() {
